@@ -1,0 +1,34 @@
+.container {
+  margin-left: 15%;
+  width: 80%;
+  background-color: #f7f5f5;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contentContainer {
+  font-size: 24px;
+}
+
+.header {
+  font-size: 34px;
+  color: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+.subHeading {
+  font-size: 38px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+a {
+  color: blue;
+}
+p {
+  line-height: 25px;
+}
+.linkDesc {
+  text-transform: uppercase;
+}
+.txt:hover {
+  text-decoration: underline;
+}
