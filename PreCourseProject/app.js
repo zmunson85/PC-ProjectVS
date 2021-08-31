@@ -12,4 +12,12 @@ function addBio() {
     document.getElementById('header').appendChild(bio);
 }
 
-// console.log(person.name + ' is ' + person.age + ' years young' + ' his hobbies are ' + person.hobbies[0] + ', ' + person.hobbies[1] + ' and ' + person.hobbies[2] + ' and he ' + person.funFact);
+for (i = 0; i < 11; i++) {
+    if (i % 2 == 0) {
+        console.log('even');
+    }
+    else {
+        console.log(i);
+    }
+}
+
