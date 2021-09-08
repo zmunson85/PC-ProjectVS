@@ -1,0 +1,44 @@
+.main-container {
+  display: grid;
+}
+
+/* pink sections */
+.light-pink {
+  background-color: #f5c6d6;
+  height: 100px;
+  width: 100%;
+  border-style: solid;
+  border-color: #ffffff;
+  grid-area: auto;
+}
+.flex {
+  display: flex;
+}
+.dark-pink {
+  background-color: #ee3e84;
+  height: 80px;
+  width: 100%;
+  border-style: solid;
+  border-color: #ffffff;
+}
+.light-blue {
+  background-color: #85cfd8;
+  height: 70px;
+  width: 100%;
+  border-style: solid;
+  border-color: #ffffff;
+}
+.lime-green {
+  background-color: #8dc63f;
+  height: 80px;
+  width: 100%;
+  border-style: solid;
+  border-color: #ffffff;
+}
+.orange {
+  background-color: #e76e34;
+  height: 80px;
+  width: 35%;
+  border-style: solid;
+  border-color: #ffffff;
+}
