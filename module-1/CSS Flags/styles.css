@@ -1,0 +1,138 @@
+/* _______FRANCE_____ */
+
+.container-france {
+  display: flex;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 10px;
+}
+.container-france,
+.france-color-one {
+  background-color: #002495;
+  width: 300px;
+  height: 200px;
+}
+.container-france,
+.france-color-two {
+  background-color: #ffffff;
+  width: 300px;
+  height: 200px;
+}
+.container-france,
+.france-color-three {
+  background-color: #ed2938;
+  width: 300px;
+  height: 200px;
+}
+
+/* ______GERMANY_______ */
+
+.container-germany {
+  height: 100%;
+  width: 300px;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 10px;
+}
+
+/* .container-germany, */
+.germany-color-one {
+  background-color: #000000;
+  width: 300px;
+  height: 66px;
+}
+/* .container-germany, */
+.germany-color-two {
+  background-color: #de0002;
+  width: 300px;
+  height: 66px;
+}
+/* .container-germany, */
+.germany-color-three {
+  background-color: #ffce00;
+  width: 300px;
+  height: 66px;
+}
+
+/* ______MADAGASCAR______ */
+.container-madagascar {
+  background-color: white;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 10px;
+}
+.container-madagascar,
+.right-madagascar {
+  display: inline-block;
+}
+.madagascar-color-one {
+  background-color: #ffffff;
+  width: 100px;
+  height: 196px;
+  display: inline-block;
+}
+
+.madagascar-color-two {
+  background-color: #fc3e32;
+  width: 196px;
+  height: 100px;
+}
+
+.madagascar-color-three {
+  background-color: #007e39;
+  width: 196px;
+  height: 100px;
+}
+
+/*____SWITZERLAND____  */
+
+.switzerland-color-one {
+  background-color: #ff0002;
+  height: 200px;
+  width: 300px;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 10px;
+}
+
+.switzerland-color-two {
+  background-color: white;
+  height: 145px;
+  width: 45px;
+  position: relative;
+  top: 30px;
+  left: 130px;
+}
+.switzerland-color-three {
+  background-color: white;
+  height: 45px;
+  width: 150px;
+  position: relative;
+  top: -65px;
+  right: -78px;
+}
+
+/* ____SWEDEN____ */
+
+.sweden-color-one {
+  background-color: #0269a6;
+  height: 200px;
+  width: 300px;
+  border-style: solid;
+  border-color: aliceblue;
+  border-width: 10px;
+}
+.sweden-color-two {
+  background-color: #fecc00;
+  height: 50px;
+  position: relative;
+  bottom: -75px;
+}
+.sweden-color-three {
+  background-color: #fecc00;
+  height: 200px;
+  width: 50px;
+  position: relative;
+  left: 80px;
+  top: -50px;
+}
