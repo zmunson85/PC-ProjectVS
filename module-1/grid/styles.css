@@ -1,5 +1,9 @@
 .main-container {
   display: grid;
+  align-items: center;
+}
+.flex {
+  display: flex;
 }
 
 /* pink sections */
@@ -10,9 +14,6 @@
   border-style: solid;
   border-color: #ffffff;
   grid-area: auto;
-}
-.flex {
-  display: flex;
 }
 .dark-pink {
   background-color: #ee3e84;
@@ -38,7 +39,7 @@
 .orange {
   background-color: #e76e34;
   height: 80px;
-  width: 35%;
+  width: 25%;
   border-style: solid;
   border-color: #ffffff;
 }
