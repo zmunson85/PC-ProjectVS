@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  text-decoration: none;
+}
+.nav-item {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+a {
+  color: #ffffff;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: crosshair;
+}
+h1 {
+  position: relative;
+  left: 350px;
+}
+.formContainer {
+  width: 50%;
+  position: relative;
+  left: 25%;
+}
+.menu-container #burgers {
+  height: 300px;
+  width: 400px;
+}
+body {
+  margin: 0;
+}
+.hero-image {
+  background-image: url("https://www.longislandpress.com/wp-content/uploads/2021/04/GettyImages-1214572587.jpg");
+  background-color: #cccccc;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
