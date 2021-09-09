@@ -34,22 +34,25 @@ h1 {
 }
 .menu-container #foodItem-burgers {
   height: 300px;
-  width: 400px;
+  width: 440px;
   position: relative;
   top: 150px;
+  border-radius: 40rem;
 }
 .menu-container #foodItem-fries {
   height: 300px;
-  width: 400px;
+  width: 440px;
   position: relative;
   top: 150px;
+  border-radius: 40rem;
 }
 .menu-container #foodItem-shakes {
   height: 300px;
-  width: 400px;
+  width: 440px;
   position: relative;
   top: 250px;
   left: 300px;
+  border-radius: 40rem;
 }
 
 .hero-image {
@@ -77,4 +80,14 @@ h1 {
   position: relative;
   top: 250px;
   left: 440px;
+}
+.phone {
+  position: relative;
+  left: 200px;
+  top: 10px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.reviews {
+  width: 100%;
 }
