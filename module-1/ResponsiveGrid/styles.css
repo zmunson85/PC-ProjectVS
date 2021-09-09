@@ -74,3 +74,28 @@
   grid-column: 3;
   grid-row: 5/10;
 }
+@media screen and (min-width: 1000px) {
+  #grid3 {
+    display: grid;
+    height: 100px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3px;
+  }
+}
+#header {
+  background-color: red;
+  grid-column: 1/5;
+}
+#sidebar {
+  background-color: green;
+}
+#sidebar2 {
+  background-color: orange;
+}
+#content {
+  background-color: burlywood;
+}
+#footer {
+  background-color: cyan;
+  grid-column: 1/5;
+}
