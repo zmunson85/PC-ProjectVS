@@ -9,7 +9,7 @@ nav {
   height: 50px;
 }
 .heading {
-  position: relative;
+  /* position: relative; */
   top: 100px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -21,7 +21,7 @@ a:hover {
   cursor: pointer;
 }
 h1 {
-  position: relative;
+  /* position: relative; */
   left: 350px;
 }
 .foodItem-1 {
@@ -29,27 +29,27 @@ h1 {
 }
 .formContainer {
   width: 50%;
-  position: relative;
+  /* position: relative; */
   left: 25%;
 }
 .menu-container #foodItem-burgers {
   height: 300px;
   width: 440px;
-  position: relative;
+  /* position: relative; */
   top: 150px;
   border-radius: 40rem;
 }
 .menu-container #foodItem-fries {
   height: 300px;
   width: 440px;
-  position: relative;
+  /* position: relative; */
   top: 150px;
   border-radius: 40rem;
 }
 .menu-container #foodItem-shakes {
   height: 300px;
   width: 440px;
-  position: relative;
+  /* position: relative; */
   top: 250px;
   left: 300px;
   border-radius: 40rem;
@@ -62,27 +62,27 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   /* top: 100px; */
 }
 
 .burgers-text {
-  position: relative;
+  /* position: relative; */
   top: 150px;
   left: 140px;
 }
 .fries-text {
-  position: relative;
+  /* position: relative; */
   top: 150px;
   left: 170px;
 }
 .shakes-text {
-  position: relative;
+  /* position: relative; */
   top: 250px;
   left: 440px;
 }
 .phone {
-  position: relative;
+  /* position: relative; */
   left: 200px;
   top: 10px;
   padding-bottom: 40px;

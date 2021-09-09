@@ -31,28 +31,29 @@
     <div class="formContainer">
         <div class="header">
             <h4 class="phone">Contact Us: Phone: (555)555-1234</h4>
-            <h4 class="phone">Send Us Your Questions & Comments</h4>
+            <div class="phone">Send Us Your Questions & Comments</div>
+        </div>
 
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="Last name" class="form-control">
+    </div>
+    <form class="form-floating">
+        <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com"
+            value="test@example.com">
+        <label for="floatingInputValue">Please Leave A Valid Email For Your Questions To Be Answered</label>
+    </form>
+    <form>
+        <div class="form-group">
+            <label>Leave Your Input Here</label>
+            <textarea class="form-control"></textarea>
         </div>
-        <div class="input-group">
-            <span class="input-group-text">First and last name</span>
-            <input type="text" aria-label="First name" class="form-control">
-            <input type="text" aria-label="Last name" class="form-control">
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm" type="button"> Submit Comment </button>
         </div>
-        <form class="form-floating">
-            <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com"
-                value="test@example.com">
-            <label for="floatingInputValue">Please Leave A Valid Email For Your Questions To Be Answered</label>
-        </form>
-        <form>
-            <div class="form-group">
-                <label>Leave Your Input Here</label>
-                <textarea class="form-control"></textarea>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-sm" type="button"> Submit Comment </button>
-            </div>
-        </form>
+    </form>
     </div>
 </body>
 
