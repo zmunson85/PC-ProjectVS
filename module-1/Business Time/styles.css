@@ -5,41 +5,76 @@ nav {
   text-decoration: none;
 }
 .nav-item {
-  font-size: 28px;
-  text-transform: uppercase;
+  font-size: 38px;
+  height: 50px;
 }
-a {
-  color: #ffffff;
+.heading {
+  position: relative;
+  top: 100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 a:link {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-  cursor: crosshair;
+  cursor: pointer;
 }
 h1 {
   position: relative;
   left: 350px;
+}
+.foodItem-1 {
+  background-color: azure;
 }
 .formContainer {
   width: 50%;
   position: relative;
   left: 25%;
 }
-.menu-container #burgers {
+.menu-container #foodItem-burgers {
   height: 300px;
   width: 400px;
+  position: relative;
+  top: 150px;
 }
-body {
-  margin: 0;
+.menu-container #foodItem-fries {
+  height: 300px;
+  width: 400px;
+  position: relative;
+  top: 150px;
 }
+.menu-container #foodItem-shakes {
+  height: 300px;
+  width: 400px;
+  position: relative;
+  top: 250px;
+  left: 300px;
+}
+
 .hero-image {
   background-image: url("https://www.longislandpress.com/wp-content/uploads/2021/04/GettyImages-1214572587.jpg");
   background-color: #cccccc;
-  height: 800px;
+  height: 1000px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  /* top: 100px; */
+}
+
+.burgers-text {
+  position: relative;
+  top: 150px;
+  left: 140px;
+}
+.fries-text {
+  position: relative;
+  top: 150px;
+  left: 170px;
+}
+.shakes-text {
+  position: relative;
+  top: 250px;
+  left: 440px;
 }
