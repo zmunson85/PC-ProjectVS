@@ -6,7 +6,7 @@ let number2 = readlineSync.question('Now Pick A Different Number: ');
 
 /* math operators */
 const operators = ['add', 'sub', 'multi', 'div'];
-let execute = readlineSync.keyInSelect(operators, " Select the a math operation like: add, subtract, multiply or divide:  ");
+let execute = readlineSync.keyInSelect(operators, " Select a math operation like: add, subtract, multiply or divide:  ");
 let selected = operators[execute]
 
 /* math function */
@@ -23,3 +23,4 @@ function doMath(firstNum, secondNum) {
     }
 }
 doMath(Number(number1), Number(number2))
+
