@@ -15,14 +15,14 @@ let selected = operators[execute]
 //using a template literal (back-ticks) to grab each argument and math operator 
 function doMath(firstNum, secondNum) {
     if (selected === 'add') {
-        return console.log(`Output: ${firstNum + secondNum}`);
+        return `Output: ${firstNum + secondNum}`;
     } else if (selected === 'sub') {
-        return console.log(`Output: ${firstNum - secondNum}`);
+        return `Output: ${firstNum - secondNum}`;
     } else if (selected === 'multi') {
-        return console.log(`Output: ${firstNum * secondNum}`);
+        return `Output: ${firstNum * secondNum}`;
     } else if (selected === 'div') {
-        return console.log(`Output: ${firstNum / secondNum}`);
+        return `Output: ${firstNum / secondNum}`;
     }
 }
-doMath(Number(number1), Number(number2))
+console.log(doMath(Number(number1), Number(number2)));
 
