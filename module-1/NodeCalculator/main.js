@@ -1,6 +1,8 @@
 var readlineSync = require('readline-sync');
 
 
+let name = readlineSync.question('Enter Your First Name: ');
+console.log('Hello ' + name + ' Lets do math in the terminal');
 let number1 = readlineSync.question('Pick A Number: ');
 let number2 = readlineSync.question('Now Pick A Different Number: ');
 
@@ -10,16 +12,16 @@ let execute = readlineSync.keyInSelect(operators, " Select a math operation like
 let selected = operators[execute]
 
 /* math function */
-//using a string literal (back-ticks) to grab each argument and math operator 
+//using a template literal (back-ticks) to grab each argument and math operator 
 function doMath(firstNum, secondNum) {
     if (selected === 'add') {
-        console.log(`Output: ${firstNum + secondNum}`);
+        return console.log(`Output: ${firstNum + secondNum}`);
     } else if (selected === 'sub') {
-        console.log(`Output: ${firstNum - secondNum}`);
+        return console.log(`Output: ${firstNum - secondNum}`);
     } else if (selected === 'multi') {
-        console.log(`Output: ${firstNum * secondNum}`);
+        return console.log(`Output: ${firstNum * secondNum}`);
     } else if (selected === 'div') {
-        console.log(`Output: ${firstNum / secondNum}`);
+        return console.log(`Output: ${firstNum / secondNum}`);
     }
 }
 doMath(Number(number1), Number(number2))
