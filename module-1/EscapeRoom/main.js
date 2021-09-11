@@ -1,14 +1,23 @@
 const readline = require('readline-sync');
 
-let name = readline.question('Please Enter Your First-Name: ');
-console.log('Hello ' + name + ' We are going to play a little game!');
-console.log("You are now trapped in a room, there is a hole in the wall that you can reach your hand into but be cautious, reaching into this hole may have fatal consequences. There is a door to escape but it is locked, you must find a key to unlock it and exit the room safely! ");
-let gameOver = false;
+/* constants */
 let findKey = false;
-let isAlive = true;
-while (isAlive === true) {
-    const yourChoices = ['Reach your hand into the hole', 'Look for the Key to unlock the door', 'Use the Key to open the door'];
-    console.log('you need to make a choice');
+let dead = false;
 
-    process.exit();
+const name = readline.question('Tell me your name!: ');
+console.log(name + ' You are now trapped in a room, you have 3 options:');
+
+while (!findKey && !dead) {
+    let options = ['Reach your hand through the wall', 'Try the Door', 'Look for a key to open the door'];
+    const yourChoice = readline.keyInSelect(options, "make your choice!");
+    if (yourChoice === 0) {
+        dead = true
+        console.log('Oh no, Deadly Snakebite killed your player');
+    } else if (yourChoice === 2) {
+        findKey = true
+        console.log('Congratulations, You win, You found the key now you can escape by unlocking the door');
+        console.log('---GameOver--')
+    } else if (yourChoice === 1) {
+        console.log('You must find the key first');
+    }
 }
