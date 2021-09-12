@@ -21,7 +21,7 @@ document.addEventListener('wheel', function (event) {
 })
 
 /* keydown event listener, Type first letter of color to see effect on screen IE r or R should be red, Y or y should be yellow, B or b will be blue, O or o will be orange, G or g will be green, keydown value us calculated by its place on the keyboard,
-reference for keyboard codes/myNums> 
+reference for keyboard codes/keyCode> 
 
 https://css-tricks.com/snippets/javascript/javascript-keycodes/
 
@@ -29,18 +29,18 @@ https://css-tricks.com/snippets/javascript/javascript-keycodes/
 */
 
 document.addEventListener('keydown', function (event) {
-    let myNums = event.which;
-    if (myNums == 66) {
+    let keyCode = event.which;
+    if (keyCode == 66) {
         changeColor.style.backgroundColor = '#343CF3 ';
-    } else if (myNums == 82) {
+    } else if (keyCode == 82) {
         changeColor.style.backgroundColor = '#DA122A ';
-    } else if (myNums == 89) {
+    } else if (keyCode == 89) {
         changeColor.style.backgroundColor = '#F7F73A ';
-    } else if (myNums == 71) {
+    } else if (keyCode == 71) {
         changeColor.style.backgroundColor = '#1f8a0f';
-    } else if (myNums == 79) {
+    } else if (keyCode == 79) {
         changeColor.style.backgroundColor = '##1F8A0F ';
-    } else if (myNums == 73) {
+    } else if (keyCode == 73) {
         changeColor.style.backgroundColor = '#9bcad4'
     }
 })
