@@ -21,3 +21,4 @@ while (!findKey && !dead) {
         console.log('You must find the key first');
     }
 }
+
