@@ -1,42 +1,62 @@
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .main {
-    border: 1px solid black;
-    width: 50%;
-    margin: auto;
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
 }
 
 #add-item {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .label {
-    margin: 10px;
+  margin: 10px;
 }
 
-#list {
-    flex-direction: column;
-    display: flex;
+#item-list {
+  flex-direction: column;
+  display: flex;
 }
 
-#list > li{
-    list-style-type: none;
-    margin: 10px auto;
+#item-list > li {
+  /*list-style-type: none;*/
+  margin: 10px auto;
+  list-style: numbers;
+  font-size: x-large;
 }
 
-#list div {
-    margin-bottom: 10px;
-    text-align: center;
+#item-list div {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.deleteButton {
+  width: 30px;
+  height: 20px;
+  margin-left: 10px;
+  color: red;
+}
+.editButton {
+  width: 80px;
+  height: 20px;
+  margin-left: 10px;
+}
+.saveButton {
+  margin-left: 10px;
+}
+.editItem {
+  margin-left: 10px;
 }
