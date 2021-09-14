@@ -8,10 +8,19 @@ for (let i = 0; i < officeItems.length; i++) {
     }
 }
 
+function addObject(j) {
+    const nameAge = document.createElement('div');
+    const objAge = document.createTextNode(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age);
+
+    nameAge.appendChild(objAge);
+    const nextDiv = document.getElementById('container');
+    document.body.insertBefore(nameAge, nextDiv);
+}
+
 
 function addElement() {
     // create a new div element
-    const newDiv = document.createElement("div");
+    let newDiv = document.createElement("div");
 
     // and give it some content
     const newContent = document.createTextNode('computer count is ' + count);
@@ -48,27 +57,19 @@ let peopleWhoWantToSeeMadMaxFuryRoad = [
         gender: "female"
     }
 ];
+
 let minAge = 18;
 
 for (let j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad.length; j++) {
     if (peopleWhoWantToSeeMadMaxFuryRoad[j].age < minAge) {
         console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + ':' + ' Mad max is not good for your young eyes!')
-    } else (
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + ':' + ' You are an Adult, you can watch any movie you like!')
-    )
+    } else (console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + ':' + ' You are an Adult, you can watch any movie you like!'))
     console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age)
 
-}
-function addObject() {
-    const nameAge = document.createElement('div');
-    const objAge = document.createTextNode(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age);
-
-    nameAge.appendChild(objAge);
-    const currentDiv = document.getElementById('container');
-    document.body.appendChild(nameAge, currentDiv);
+    addObject(j);
 }
 
 
-
+/* be sure to check local vs global scope */
 
 
