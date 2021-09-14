@@ -32,7 +32,6 @@
 }
 
 #item-list > li {
-  /*list-style-type: none;*/
   margin: 10px auto;
   list-style: numbers;
   font-size: x-large;
