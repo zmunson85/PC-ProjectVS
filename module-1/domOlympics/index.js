@@ -1,3 +1,5 @@
+"use_strict";
+
 let newHeader = document.createElement('h1');
 newHeader.setAttribute('class', 'header');
 newHeader.setAttribute('id', 'new_header');
@@ -37,12 +39,14 @@ let rightSideMsg = document.querySelectorAll('.right');
 let leftSideMsg = document.querySelectorAll('.left');
 
 
-/* remove nodes from leftSide */
+/* remove nodes from leftSide and rightSide */
 document.getElementById('clear-button').addEventListener('click', function (event) {
     addMessages.removeChild(leftSide)
     addMessages.removeChild(rightSide)
     addMessages.removeChild(leftSide2)
     addMessages.removeChild(rightSide2)
+    addMessages.removeChild('.left')
+    addMessages.removeChild('.right')
 })
 
 /* Change Background Color of messages left and right, add more themes too */
@@ -94,27 +98,36 @@ drpDwn.addEventListener('click', function () {
         for (let i = 0; i < leftSideMsg.length; i++) {
             leftSideMsg[i].style.backgroundColor = '#EA6E0C ';
             leftSideMsg[i].style.fontSize = 'x-large';
+            console.log(i);
 
         }
     }
 })
 
+document.message.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.dir(document.getElementById('input').value);
+})
+
 // /* Try to use form on browser */
-// let messageSide = "left";
-// let btn = document.getElementById('newMsg');
-// btn.addEventListener("click", function () {
-//     let messageContainer = document.getElementsByClassName("messages");
-//     let newMessage = document.createElement("div");
-//     let content = document.getElementById("input").value;
-//     newMessage.innerText = content;
-//     if (messageSide == ".left") {
-//         newMessage.classList.add(".left");
-//         messageSide == ".right";
-//         messageContainer.prepend(newMessage);
-//     }
-//     else if (messageSide == ".right") {
-//         newMessage.classList.add(".right");
-//         messageSide = ".left";
-//         messageContainer.append(newMessage);
-//     }
-// });
+let messageSide = ".left";
+let btn = document.getElementById('newMsg');
+btn.addEventListener("click", function () {
+    let messageContainer = document.querySelector(".messages");
+    let newMessage = document.createElement("div");
+    let content = document.getElementById("input").value;
+    newMessage.classList.add('message')
+    newMessage.innerText = content;
+
+    if (messageSide == ".left") {
+        newMessage.classList.add("left");
+        messageSide = ".right";
+        messageContainer.prepend(newMessage);
+    }
+    else if (messageSide == ".right") {
+        newMessage.classList.add("right");
+        messageSide = ".left";
+        messageContainer.append(newMessage);
+    }
+    console.log(newMessage);
+});
