@@ -38,5 +38,5 @@ for (let j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad.length; j++) {
     } else (
         console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + ':' + ' You are an Adult, you can watch any movie you like!')
     )
-    console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender)
+    console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age)
 }
