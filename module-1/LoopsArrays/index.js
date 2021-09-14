@@ -7,6 +7,24 @@ for (let i = 0; i < officeItems.length; i++) {
 
     }
 }
+
+
+function addElement() {
+    // create a new div element
+    const newDiv = document.createElement("div");
+
+    // and give it some content
+    const newContent = document.createTextNode('computer count is ' + count);
+
+    // add the text node to the newly created div
+    newDiv.appendChild(newContent);
+
+    // add the newly created element and its content into the DOM
+    const currentDiv = document.getElementById("container");
+    document.body.insertBefore(newDiv, currentDiv);
+}
+addElement();
+
 let peopleWhoWantToSeeMadMaxFuryRoad = [
     {
         name: "Mike",
@@ -39,4 +57,18 @@ for (let j = 0; j < peopleWhoWantToSeeMadMaxFuryRoad.length; j++) {
         console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + ':' + ' You are an Adult, you can watch any movie you like!')
     )
     console.log(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age)
+
 }
+function addObject() {
+    const nameAge = document.createElement('div');
+    const objAge = document.createTextNode(peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s gender is " + peopleWhoWantToSeeMadMaxFuryRoad[j].gender + ' & ' + peopleWhoWantToSeeMadMaxFuryRoad[j].name + "'s age is " + ' ' + peopleWhoWantToSeeMadMaxFuryRoad[j].age);
+
+    nameAge.appendChild(objAge);
+    const currentDiv = document.getElementById('container');
+    document.body.appendChild(nameAge, currentDiv);
+}
+
+
+
+
+
