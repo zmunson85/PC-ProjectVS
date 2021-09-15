@@ -75,7 +75,6 @@ for (let o = 0; o < peopleArray.length; o++) {
 
 
 
-console.log('___________________people of people name array_____________________')
 let nameArr = [];
 let occupationArr = [];
 for (let p = 0; p < peopleArray.length; p++) {
@@ -85,7 +84,7 @@ for (let p = 0; p < peopleArray.length; p++) {
 }
 
 
-console.log('___________________people of people name array_____________________')
+console.log('________________________________________')
 let everyOtherName = [];
 let everyOtherOccupation = [];
 for (let q = 0; q < peopleArray.length; q++) {
@@ -101,8 +100,27 @@ for (let r = 0; r < peopleArray.length; r++) {
     }
 }
 
-console.log('___________________people of people name array_____________________');
+// console.log('________________________________________');
 
+
+/* Create an array that mimics a grid like the following using nested for loops:
+[[0, 0, 0], 
+[0, 0, 0], 
+[0, 0, 0]]
+2.Create an array that mimics a grid like the following using nested for loops:
+
+[[0, 0, 0], 
+[1, 1, 1], 
+[2, 2, 2]]
+3.Create an array that mimics a grid like the following using nested for loops:
+
+[[0, 1, 2], 
+[0, 1, 2], 
+[0, 1, 2]]
+Given a grid like the previous ones, write a nested for loop that would change every number to an x.
+var grid = [["x", ...], 
+            ["x", ...], 
+            ["x",...], ...]  */
 
 // let arrayOfArrays = [];
 // for (let s = 0; s <= 0; s++) {
