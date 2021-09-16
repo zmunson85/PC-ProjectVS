@@ -25,4 +25,3 @@ function doMath(firstNum, secondNum) {
     }
 }
 console.log(doMath(Number(number1), Number(number2)));
-

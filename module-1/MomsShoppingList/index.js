@@ -18,7 +18,7 @@ function edit(e) {
     const inputNew = document.createElement("input");
     inputNew.setAttribute("name", "editItem");
     inputNew.setAttribute("class", "editItem");
-    inputNew.setAttribute("value", (e.parentNode.textContent));
+    inputNew.setAttribute("value", "Replace Text");
 
     e.parentNode.appendChild(saveButton);
     e.parentNode.appendChild(inputNew);
