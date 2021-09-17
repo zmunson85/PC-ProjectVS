@@ -1,3 +1,4 @@
+
 for (let i = 0; i <= 100; i++) {
     let output = "";
     //all numbers divisible by 3 &&/ or all numbers divisible by 5 that both have a remainder of 0, result= "FizzBuzz"
@@ -12,7 +13,5 @@ for (let i = 0; i <= 100; i++) {
         //else is a catch all for all reamaing numbers that are not divisible by 5 or 3 in which case we print the number in that index. 
     } else
         output = i;
-
-    console.log(output);
 
 }

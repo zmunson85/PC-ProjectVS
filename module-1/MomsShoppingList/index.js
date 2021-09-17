@@ -18,7 +18,8 @@ function edit(e) {
     const inputNew = document.createElement("input");
     inputNew.setAttribute("name", "editItem");
     inputNew.setAttribute("class", "editItem");
-    inputNew.setAttribute("value", (e.firstChild));
+    inputNew.setAttribute("value", (e.parentNode.textContent));
+    console.log((e.parentNode.textContent));
 
     e.parentNode.appendChild(saveButton);
     e.parentNode.appendChild(inputNew);
