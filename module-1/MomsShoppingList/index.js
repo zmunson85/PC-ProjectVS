@@ -18,8 +18,9 @@ function edit(e) {
     const inputNew = document.createElement("input");
     inputNew.setAttribute("name", "editItem");
     inputNew.setAttribute("class", "editItem");
-    inputNew.setAttribute("value", (e.parentNode.textContent));
-    console.log((e.parentNode.textContent));
+    inputNew.setAttribute("value", ((e.parentNode.childNodes[0].nodeValue)));
+    console.log((e.parentNode.childNodes));
+    /* https://stackoverflow.com/questions/3442394/using-text-to-retrieve-only-text-not-nested-in-child-tags */
 
     e.parentNode.appendChild(saveButton);
     e.parentNode.appendChild(inputNew);

@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 .title {
   text-align: center;
 }
@@ -17,7 +22,7 @@
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 3px solid rgb(14, 158, 26);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -35,6 +40,7 @@
   margin: 10px auto;
   list-style: numbers;
   font-size: x-large;
+  color: blue;
 }
 
 #item-list div {
@@ -47,11 +53,13 @@
   height: 20px;
   margin-left: 10px;
   color: red;
+  border: solid red;
 }
 .editButton {
   width: 80px;
   height: 20px;
   margin-left: 10px;
+  border: solid rgb(14, 158, 26);
 }
 .saveButton {
   margin-left: 10px;
@@ -59,4 +67,5 @@
 .editItem {
   margin-left: 10px;
   color: grey;
+  border: solid rgb(14, 158, 26);
 }
