@@ -5,9 +5,12 @@
 }
 header {
   position: relative;
-  top: -260px;
-  right: -450px;
+  top: -250px;
+  left: 45%;
+  width: 30%;
+  color: darksalmon;
 }
+
 body {
   font-family: "Muli", sans-serif;
   display: flex;
@@ -16,11 +19,14 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-color: black;
 }
 
 .container {
   display: flex;
   width: 90vw;
+  background-color: darksalmon;
+  border-radius: 2rem;
 }
 
 .panel {
@@ -51,7 +57,7 @@ body {
 }
 
 .panel.active h3 {
-  opacity: 1;
+  opacity: 1.5;
   transition: opacity 0.3s ease-in 0.4s;
 }
 

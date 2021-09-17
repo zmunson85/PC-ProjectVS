@@ -1,21 +1,18 @@
 console.log('---------------------------toUpper/toLower--------------------------------------')
 
-let thisStr = 'HELLO'
-let string = 'hello'
-function lowerUpper() {
+function lowerUpper(thisStr, string) {
     let strUpper = string.toUpperCase();
     let strLower = thisStr.toLowerCase();
 
     return console.log(strUpper + strLower);
 }
-lowerUpper();
+lowerUpper('HELLO', 'hello');
 
 
 console.log('-----------------------------------Math.floor------------------------------');
 
-let phrase = 'hello'
-let phraseRecip = 'hello world'
-function findMidIndex() {
+
+function findMidIndex(phrase, phraseRecip) {
     let mid = (phrase.length) / 2;
     let mid2 = (phraseRecip.length) / 2;
     console.log('hello mid index is: ' + Math.floor(mid));
@@ -23,15 +20,14 @@ function findMidIndex() {
 
 }
 
-findMidIndex();
+findMidIndex('Hello', 'Hello World');
 
 
 console.log('------------------------------Slice-----------------------------------');
 
-let myString = 'Hello';
-let myString2 = 'Hello World';
 
-function firstHalf() {
+
+function firstHalf(myString, myString2) {
 
     let halfString = myString.slice(0, 2);//half of "hello" is 2 according to our findMid so start and index 0 and stop at index 2 it will cut off index2-the end of the array.
 
@@ -40,20 +36,11 @@ function firstHalf() {
     console.log(halfString2);
 }
 
-firstHalf();
-console.log('------------------------------Tricky-----------------------------------');
+firstHalf('Hello', 'Hello World');
 
 
 
-function mixedUp(myString) {
-    let halfIndex = findMidIndex(myString);
-    let firstPart = myString.slice(0, halfIndex);
-    let secondPart = myString.slice(halfIndex, myString.length);
-    let newStr = firstPart.toUpperCase() + secondPart.toLowerCase();
-    return newStr;
-}
-mixedUp('Hello');
-mixedUp('Hello World');
+
 
 
 
