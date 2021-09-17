@@ -12,9 +12,9 @@ function formAlert() {
     if (genderSelect[1].checked) {
         var gender = "Female";
     }
-    if (genderSelect[2].checked) {
-        var gender = "Meh..";
-    }
+    // if (genderSelect[1].checked) {
+    //     var gender = "Meh..";
+    // }
     var location = document.getElementsByName("travel-location")[0].value;
     var diet = [];
     if (form['vegan'].checked) {
