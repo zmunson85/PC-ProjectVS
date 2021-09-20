@@ -107,6 +107,7 @@ drpDwn.addEventListener('click', function () {
 document.message.addEventListener('submit', function (event) {
     event.preventDefault();
     console.dir(document.getElementById('input').value);
+
 })
 
 // /* Try to use form on browser */
@@ -129,5 +130,7 @@ btn.addEventListener("click", function () {
         messageSide = ".left";
         messageContainer.append(newMessage);
     }
+
+
     console.log(newMessage);
 });

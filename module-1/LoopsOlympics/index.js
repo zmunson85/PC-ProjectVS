@@ -132,9 +132,9 @@ var grid = [["x", ...],
 //     console.log(arrayOfArrays)
 // }
 let arrayOfArrays1 = [];
-for (let u = 0; u <= 2; u++) {
+for (let u = 2; u <= 2; u++) {
     let array2 = [];
-    for (let v = 0; v <= 2; v++) {
+    for (let v = 1; v <= 2; v++) {
         array2.push(u)
     }
     arrayOfArrays1.push(array2)
