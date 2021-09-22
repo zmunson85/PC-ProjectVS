@@ -1,5 +1,6 @@
 "use_strict";
 
+
 let newHeader = document.createElement('h1');
 newHeader.setAttribute('class', 'header');
 newHeader.setAttribute('id', 'new_header');
@@ -53,9 +54,10 @@ document.getElementById('clear-button').addEventListener('click', function (even
 let drpDwn = document.getElementById('theme-drop-down');
 let colorRight = document.getElementById('.right');
 let colorLeft = document.getElementById('.left');
+
 drpDwn.addEventListener('click', function () {
     let option = drpDwn.options[drpDwn.selectedIndex].value;
-    if (option === 'theme-one') {
+    if (option === '1') {
         for (let i = 0; i < rightSideMsg.length; i++) {
             rightSideMsg[i].style.background = 'lightblue';
             rightSideMsg[i].style.fontSize = 'x-large';
@@ -66,7 +68,7 @@ drpDwn.addEventListener('click', function () {
             leftSideMsg[i].style.fontSize = 'x-large';
         }
     }
-    else if (option === 'theme-two') {
+    else if (option === '2') {
         for (let i = 0; i < rightSideMsg.length; i++) {
             rightSideMsg[i].style.backgroundColor = 'red';
             rightSideMsg[i].style.fontSize = 'x-large';
@@ -77,7 +79,7 @@ drpDwn.addEventListener('click', function () {
             leftSideMsg[i].style.fontSize = 'x-large';
         }
     }
-    else if (option === 'theme-three') {
+    else if (option === '3') {
         for (let i = 0; i < rightSideMsg.length; i++) {
             rightSideMsg[i].style.backgroundColor = 'orange';
             rightSideMsg[i].style.fontSize = 'x-large';
@@ -88,7 +90,7 @@ drpDwn.addEventListener('click', function () {
             leftSideMsg[i].style.fontSize = 'x-large';
         }
     }
-    else if (option === 'theme-four') {
+    else if (option === '4') {
         for (let i = 0; i < rightSideMsg.length; i++) {
             rightSideMsg[i].style.backgroundColor = '#5E3A0A ';
             rightSideMsg[i].style.color = 'white';
