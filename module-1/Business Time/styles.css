@@ -91,3 +91,6 @@ h1 {
 .reviews {
   width: 100%;
 }
+div.col {
+  image-resolution: transparent;
+}
