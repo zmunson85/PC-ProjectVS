@@ -42,7 +42,7 @@ input {
 form {
   position: absolute;
   left: 30%;
-  bottom: 15%;
+  bottom: 30%;
   border: solid black 8px;
   border-radius: 8px;
   text-decoration: none;
@@ -50,16 +50,26 @@ form {
 .addCol {
   color: blue;
   height: 30px;
+  border: solid blue;
+  list-style: none;
 }
 .subCol {
   color: red;
   height: 30px;
+  border: solid red;
+  list-style: none;
 }
 .multiCol {
   color: green;
   height: 30px;
+  border: solid green;
+  list-style: none;
 }
 .resultsHeading {
   position: relative;
-  left: 20%;
+  left: 25%;
+}
+li {
+  font-size: 30px;
+  margin-right: 15%;
 }

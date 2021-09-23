@@ -14,26 +14,26 @@
         <div id="addition">
             <input placeholder="FirstValue" type="number" name="num1">
             <input placeholder="SecondValue" type="number" name="num2">
-            <button class="add">Add</button>
+            <button id="addResult" class="add">Add</button>
         </div>
         <!-- Second Section: Input Values to be subtracted -->
         <div id="subtraction">
             <input placeholder="FirstValue" type="number" name="num3">
             <input placeholder="SecondValue" type="number" name="num4">
-            <button class="sub">Subtract</button>
+            <button id="subResult" class="sub">Subtract</button>
         </div>
         <!--Third Section: Input Values to Multiply -->
         <div id="multiplication">
             <input placeholder="FirstValue" type="number" name="num5">
             <input placeholder="SecondValue" type="number" name="num6">
-            <button class="multi">Multiply</button>
+            <button id='multiResult' class="multi">Multiply</button>
         </div>
-        <div class="results">
+        <div id="results">
+            <h1 class="resultsHeading">🔽Results🔽</h1>
             <ul>
-                <h1 class="resultsHeading">🔽Results🔽</h1>
-                <li class="addCol"></li>
-                <li class="subCol"></li>
-                <li class="multiCol"></li>
+                <li id="add" class="addCol"></li>
+                <li id="subtract" class="subCol"></li>
+                <li id='multiply' class="multiCol"></li>
             </ul>
         </div>
     </form>
