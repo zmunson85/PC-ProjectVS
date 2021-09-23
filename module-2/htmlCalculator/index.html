@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HtmlCalculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form name="miniCalculator">
+        <!-- First Section: Input Values to be added -->
+        <div id="addition">
+            <input placeholder="FirstValue" type="number" name="num1">
+            <input placeholder="SecondValue" type="number" name="num2">
+            <button class="add">Add</button>
+        </div>
+        <!-- Second Section: Input Values to be subtracted -->
+        <div id="subtraction">
+            <input placeholder="FirstValue" type="number" name="num3">
+            <input placeholder="SecondValue" type="number" name="num4">
+            <button class="sub">Subtract</button>
+        </div>
+        <!--Third Section: Input Values to Multiply -->
+        <div id="multiplication">
+            <input placeholder="FirstValue" type="number" name="num5">
+            <input placeholder="SecondValue" type="number" name="num6">
+            <button class="multi">Multiply</button>
+        </div>
+        <div class="results">
+            <ul>
+                <h1 class="resultsHeading">🔽Results🔽</h1>
+                <li class="addCol"></li>
+                <li class="subCol"></li>
+                <li class="multiCol"></li>
+            </ul>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

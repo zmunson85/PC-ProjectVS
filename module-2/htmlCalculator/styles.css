@@ -1,0 +1,65 @@
+.add {
+  background-color: blue;
+  height: 40px;
+  width: 50px;
+  border-radius: 2rem;
+}
+.sub {
+  background-color: red;
+  height: 40px;
+  width: 90px;
+  border-radius: 2rem;
+}
+.multi {
+  background-color: green;
+  height: 40px;
+  width: 90px;
+  border-radius: 2rem;
+}
+div#addition {
+  background-color: blue;
+  font-size: larger;
+  font-weight: 500;
+  /* width: 80%; */
+}
+div#subtraction {
+  cursor: pointer;
+  background-color: red;
+  font-size: larger;
+  font-weight: 500;
+  /* width: 80%; */
+}
+div#multiplication {
+  background-color: green;
+  font-size: larger;
+  font-weight: 500;
+  /* width: 80%; */
+}
+input {
+  height: 25px;
+  justify-content: center;
+}
+form {
+  position: absolute;
+  left: 30%;
+  bottom: 15%;
+  border: solid black 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.addCol {
+  color: blue;
+  height: 30px;
+}
+.subCol {
+  color: red;
+  height: 30px;
+}
+.multiCol {
+  color: green;
+  height: 30px;
+}
+.resultsHeading {
+  position: relative;
+  left: 20%;
+}
