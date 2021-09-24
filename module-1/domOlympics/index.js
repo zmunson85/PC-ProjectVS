@@ -25,29 +25,36 @@ addSentence.style.textAlign = 'center'
 document.getElementById('addSentenceId').innerHTML = ' wrote the JavaScript <br>';
 
 /* target a text node with the same element id by index, such as leftSide[0]=node1, leftSide[1]=node2 */
-let leftSide = document.querySelectorAll('.left')[0];
+
+
+
+let leftSide = document.querySelectorAll('.left');
 leftSide.innerText = 'Do you like football?';
 
-let rightSide = document.querySelectorAll('.right')[0];
+let rightSide = document.querySelectorAll('.right');
 rightSide.innerText = 'I love football, why do you ask?'
 
-let leftSide2 = document.querySelectorAll('.left')[1];
-leftSide2.innerText = 'I have tickets to this weeks game, do you want to join me?';
+// let leftSide2 = document.querySelectorAll('.left')[1];
+// leftSide2.innerText = 'I have tickets to this weeks game, do you want to join me?';
 
-let rightSide2 = document.querySelectorAll('.right')[1];
-rightSide2.innerText = 'Say less, I will have my cooler ready for the tailgate party!';
-let rightSideMsg = document.querySelectorAll('.right');
-let leftSideMsg = document.querySelectorAll('.left');
+// let rightSide2 = document.querySelectorAll('.right')[1];
+// rightSide2.innerText = 'Say less, I will have my cooler ready for the tailgate party!';
 
 
 /* remove nodes from leftSide and rightSide */
 document.getElementById('clear-button').addEventListener('click', function (event) {
-    addMessages.removeChild(leftSide)
-    addMessages.removeChild(rightSide)
-    addMessages.removeChild(leftSide2)
-    addMessages.removeChild(rightSide2)
-    addMessages.removeChild('.left')
-    addMessages.removeChild('.right')
+    let left = document.querySelectorAll('.message');
+    for (let i = 0; i < left.length; i++) {
+        left[i].parentElement.removeChild(left[i]);
+        console.log(left[i]);
+    }
+
+    // addMessages.removeChild(leftSide)
+    // addMessages.removeChild(rightSide)
+    // addMessages.removeChild(leftSide2)
+    // addMessages.removeChild(rightSide2)
+    // addMessages.removeChild('.left')
+    // addMessages.removeChild('.right')
 })
 
 /* Change Background Color of messages left and right, add more themes too */
@@ -56,7 +63,18 @@ let colorRight = document.getElementById('.right');
 let colorLeft = document.getElementById('.left');
 
 drpDwn.addEventListener('click', function () {
+    updateTheme();
+})
+
+document.message.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.dir(document.getElementById('input').value);
+
+})
+function updateTheme() {
     let option = drpDwn.options[drpDwn.selectedIndex].value;
+    let rightSideMsg = document.querySelectorAll('.right');
+    let leftSideMsg = document.querySelectorAll('.left');
     if (option === '1') {
         for (let i = 0; i < rightSideMsg.length; i++) {
             rightSideMsg[i].style.background = 'lightblue';
@@ -104,18 +122,13 @@ drpDwn.addEventListener('click', function () {
 
         }
     }
-})
-
-document.message.addEventListener('submit', function (event) {
-    event.preventDefault();
-    console.dir(document.getElementById('input').value);
-
-})
+}
 
 // /* Try to use form on browser */
 let messageSide = ".left";
 let btn = document.getElementById('newMsg');
 btn.addEventListener("click", function () {
+
     let messageContainer = document.querySelector(".messages");
     let newMessage = document.createElement("div");
     let content = document.getElementById("input").value;
@@ -125,7 +138,7 @@ btn.addEventListener("click", function () {
     if (messageSide == ".left") {
         newMessage.classList.add("left");
         messageSide = ".right";
-        messageContainer.prepend(newMessage);
+        messageContainer.append(newMessage);
     }
     else if (messageSide == ".right") {
         newMessage.classList.add("right");
@@ -133,6 +146,6 @@ btn.addEventListener("click", function () {
         messageContainer.append(newMessage);
     }
 
-
+    updateTheme();
     console.log(newMessage);
 });
