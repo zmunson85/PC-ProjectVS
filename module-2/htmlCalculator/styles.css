@@ -3,18 +3,21 @@
   height: 40px;
   width: 80px;
   border-radius: 1rem;
+  color: white;
 }
 .sub {
   background-color: red;
   height: 40px;
   width: 90px;
   border-radius: 1rem;
+  color: white;
 }
 .multi {
   background-color: green;
   height: 40px;
   width: 90px;
   border-radius: 1rem;
+  color: white;
 }
 div#addition {
   background-color: blue;
