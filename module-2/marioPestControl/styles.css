@@ -1,0 +1,315 @@
+#goombas {
+  height: 350px;
+  width: 350px;
+  /* display: grid; */
+  border-radius: 12rem;
+}
+/* #test1 {
+  height: 350px;
+  width: 350px;
+  display: grid;
+  border-radius: 2rem;
+  position: relative;
+  left: 40%;
+  top: 0;
+} */
+* {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-image: url("https://virtualbackgrounds.site/wp-content/uploads/2020/07/super-mario-bros-level-ending.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  /* background-color: #9933cc; */
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+.listItem {
+  width: 130px;
+  height: 130px;
+}
+#titleImage {
+  position: relative;
+  left: 35%;
+  top: 40%;
+}
+button {
+  background: blue;
+  cursor: pointer;
+  border-radius: 12rem;
+  border: solid black 6px;
+}
+#coin {
+  height: 50px;
+  width: 50px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  width: 100%;
+}
+.col-3 {
+  display: flex;
+}
+#test {
+}
+#mbros {
+  border-radius: 12rem;
+  height: 130px;
+  width: 130px;
+  border: solid black 6px;
+}
+#G-count {
+  color: yellow;
+  font-size: 55px;
+}
+
+div.card {
+  height: 600px;
+  background-color: red;
+}
+div.row {
+  justify-content: space-around;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+#G-total {
+  height: 40px;
+  font-size: 20px;
+  width: 40px;
+}
+#BB-total {
+  height: 40px;
+  font-size: 20px;
+  width: 40px;
+}
+#CC-total {
+  height: 40px;
+  font-size: 20px;
+  width: 40px;
+}
+#bobombsTotal {
+  height: 40px;
+  font-size: 15px;
+}
+#cheapCheepTotal {
+  height: 40px;
+  font-size: 15px;
+}
+#goombasTotal {
+  height: 40px;
+  font-size: 15px;
+}
