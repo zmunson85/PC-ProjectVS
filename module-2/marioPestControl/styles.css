@@ -1,3 +1,7 @@
+.titleDesc {
+  font-size: 20px;
+  color: yellow;
+}
 #goombas {
   height: 350px;
   width: 350px;
