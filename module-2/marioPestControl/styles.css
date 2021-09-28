@@ -49,7 +49,7 @@ body {
 }
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .column {
     width: 100%;
     display: block;
@@ -132,7 +132,7 @@ html {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
   /* For tablets: */
   .col-s-1 {
     width: 8.33%;
@@ -183,7 +183,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 268px) {
+@media only screen and (min-width: 768px) {
   /* For desktop: */
   .col-1 {
     width: 8.33%;
