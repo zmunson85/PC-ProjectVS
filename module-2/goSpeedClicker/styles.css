@@ -1,7 +1,12 @@
-h1 {
+#title {
   margin-left: 45%;
-
-  width: 10%;
+  width: 22.5%;
+  background-color: green;
+  border: solid blue;
+}
+#count {
+  margin-left: 55%;
+  width: 5%;
   background-color: green;
   border: solid blue;
 }
