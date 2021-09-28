@@ -1,12 +1,31 @@
 #title {
-  margin-left: 45%;
-  width: 22.5%;
+  align-items: center;
+  /* margin-left: 45%; */
+  margin-left: 5%;
+  width: 90%;
   background-color: green;
-  border: solid blue;
+  border: solid purple 12px;
 }
 #count {
-  margin-left: 55%;
-  width: 5%;
+  /* margin-left: 55%; */
+  margin-left: 10%;
+  width: 80%;
   background-color: green;
-  border: solid blue;
+  border: solid purple 12px;
+}
+#clear {
+  margin-left: 12%;
+  width: 80%;
+  background-color: green;
+  border: solid purple 12px;
+}
+div.card {
+  color: orange;
+}
+.card {
+  padding: 20px 20px;
+  position: relative;
+  top: 10%;
+  left: 20%;
+  background-color: black;
 }
