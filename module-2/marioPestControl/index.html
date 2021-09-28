@@ -25,59 +25,66 @@
                 <h3>Flat Rate Pest Control</h3>
                 <img id="mbros" class="listItem"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXMcm8B9hJUDmK3GxnRBP3dueobJkxV1p_SRzdju-6Yov7hrin1ArIV2XoxMzfxI7KoE&usqp=CAU">
-
-                <p class="titleDesc">Pest Control Price Quote<br><br>If you have a pest problem we can help, get your
-                    quote today. Click the baddies to build up a quote. </p>
-
+                <div id="totals">
+                    <label id="totalPrice">Price Quote: </label><br>
+                    <input type="text" id="total" name="total"><br>
+                    <input type="submit" id="submit" value="Get Quote"><br>
+                </div>
+                <!-- <p class="titleDesc">Pest Control Price Quote<br><br>If you have a pest problem we can help, get your
+                    quote today. Fill in baddies amounts to build a quote. </p>
+                <button id='getQuote' type="submit"
+                    style='position: relative; top: 20%;  font-size: 25px; color: yellow; background-color: transparent;'>Submit
+                    For Quote</button> -->
             </div>
         </div>
-
         <div class="column">
             <div class="card">
-                <h3>Bob-ombs</h3>
-                <button id="click">
+                <h3>BobOmbs</h3>
+                <form id="click">
                     <img class="listItem"
                         src="https://static.wikia.nocookie.net/nintendo/images/8/86/Bob-omb_%28MKWii%29.png/revision/latest?cb=20120819225302&path-prefix=en">
-                </button>
-                <p class="gCount" id="G-count">Price:<br>7<img src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif"
-                        id="coin"></p>
-                <p id="B-total"></p>
+                    <p class="gCount" id="G-count">Price:<br>7<img
+                            src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif" id="coin"></p>
+                    <input name='bobOmbs' type="number" placeholder="Enter Amount Here" name="NumOfPests" id="BB-total">
+
+                </form>
             </div>
         </div>
         <!-- https://mario.wiki.gallery/images/thumb/a/ae/NSMBU_Spiny_Cheep_Artwork.png/1200px-NSMBU_Spiny_Cheep_Artwork.png -->
         <div class="column">
             <div class="card">
                 <h3>Cheap-Cheep</h3>
-                <button id="click2">
+                <form id="click2">
                     <img class="listItem"
                         src="https://mario.wiki.gallery/images/thumb/a/ae/NSMBU_Spiny_Cheep_Artwork.png/1200px-NSMBU_Spiny_Cheep_Artwork.png">
-                </button>
-                <p class="gCount" id="G-count">Price:<br>11<img
-                        src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif" id="coin"></p>
-                <p id="CC-total"></p>
+                    <p class="gCount" id="G-count">Price:<br>11<img
+                            src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif" id="coin"></p>
+                    <input type="number" placeholder="Enter Amount Here" id="CC-total"></input>
+                </form>
             </div>
         </div>
 
         <div class="column">
             <div class="card">
                 <h3>Goombas</h3>
-                <button id="click3">
+                <form name="" id="click3">
                     <img class="listItem"
                         src="https://static.wikia.nocookie.net/papermario/images/9/99/Hyper_goomba.png/revision/latest?cb=20130528225911">
-                </button>
-                <p class="gCount" id="G-count">Price:<br>5<img src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif"
-                        id="coin"></p>
-                <p id="G-total"></p>
+                    <p class="gCount" id="G-count">Price:<br>5<img
+                            src="https://c.tenor.com/niCYkSegysUAAAAi/coin-mario.gif" id="coin"></p>
+                    <input placeholder="Enter Amount Here" id="G-total"></input>
+                </form>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>Website: LocalHost.com </p>
-        <p>Email: marioPest@abc.com</p>
-        <p>Reach us at (555)-555-pests</p>
-        <p>Address: 2240 WestChester Ave, New York, New York</p>
+        <p>Website:<a href="OnMyLocalHost.com">OnMyLocalHost.com</a> </p>
+        <p>Email:<a href="mailto: marioPest@abc.com">marioPest@abc.com</a></p>
+        <p>Reach us at (555)-555-PEST</p>
+        <p>Address: 2240 N.Road, NY, New York</p>
     </div>
+
     <script src="main.js"></script>
 </body>
 
