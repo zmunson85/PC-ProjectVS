@@ -1,0 +1,15 @@
+[3,6,8,2] Original arr
+[6,8] Filtered Greater Than 5
+[ 6, 8 ]
+[ 6, 8, 2 ]
+[ 6, 8, 2 ]
+[ 'dog', 'wolf', 'by', 'eaten' ]
+[
+  { name: 'Angelina Jolie', member: true },
+  { name: 'Paris Hilton', member: true },
+  { name: 'Bob Ziroll', member: true }
+]
+[
+  { name: 'Angelina Jolie', age: 80 },
+  { name: 'Bob Ziroll', age: 100 }
+]

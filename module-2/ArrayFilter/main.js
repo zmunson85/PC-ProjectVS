@@ -53,8 +53,6 @@ console.log(peopleWhoBelongToTheIlluminati([
 
 /* Make a filtered list of all the people who are old enough to see The Matrix (older than 18) */
 
-
-
 function ofAge(arr) {
     return arr.filter(object => object.age >= 18);
 }
