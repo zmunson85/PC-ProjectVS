@@ -30,7 +30,7 @@ var downloadTimer = setInterval(function () {
     if (clickClock <= 0) {
         clearInterval(downloadTimer);
         let endRace = document.getElementById("timer").innerHTML = "Times Up";
-        console.log(endRace);
+        alert(`${endRace}, Race completed with ${counter} clicks`)
         localStorage.removeItem('count');
         counter = 0;
         setCount.textContent = 0;
