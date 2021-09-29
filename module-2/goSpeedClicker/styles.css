@@ -1,31 +1,46 @@
 #title {
   align-items: center;
   /* margin-left: 45%; */
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 26%;
+  width: 47%;
   background-color: green;
   border: solid purple 12px;
+  border-radius: 12rem;
 }
 #count {
   /* margin-left: 55%; */
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 30%;
+  width: 40%;
   background-color: green;
   border: solid purple 12px;
+  height: 25%;
+  border-radius: 12rem;
 }
 #clear {
-  margin-left: 12%;
+  margin-left: 40%;
   width: 20%;
   background-color: green;
   border: solid purple 12px;
+  border-radius: 12rem;
 }
 div.card {
   color: orange;
 }
 .card {
   padding: 20px 20px;
+  /* width: 80%; */
   position: relative;
   top: 10%;
-  left: 20%;
+  background-color: black;
+}
+#timer {
+  margin-left: 45%;
+}
+.headerImg {
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+}
+header {
   background-color: black;
 }
