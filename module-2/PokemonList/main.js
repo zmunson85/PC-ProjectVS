@@ -3,6 +3,9 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://api.vschool.io/pokemon', true);
 xhr.send();
 
+// xhr.open('GET', 'https://pokeapi.co/api/v2/pokemon 1', true);
+// xhr.send();
+
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         let sourceData = xhr.responseText;
@@ -19,3 +22,4 @@ function displayNames(arr) {
         console.log(`${element.name}`)
     });
 }
+

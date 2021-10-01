@@ -66,3 +66,4 @@ console.log(byAge([
   //  { name: 'Quiet Samurai', age: 22 },
   //  { name: 'Unlucky Swami', age: 77 },
   //  { name: 'Arrogant Ambassador', age: 100 } ]
+
