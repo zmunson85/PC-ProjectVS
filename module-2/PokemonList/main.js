@@ -18,7 +18,13 @@ function displayNames(arr) {
     arr.forEach(element => {
         let div = document.createElement('div');
         div.textContent = element.name;
-        document.body.appendChild(div).style.marginLeft = '45%';
+        document.body.appendChild(div).style.cssText = `
+            position: relative;
+            left: 45%;
+            border: solid black 2px;
+            width: 200px;
+            height: 200px;
+        `;
         console.log(`${element.name}`)
     });
 }

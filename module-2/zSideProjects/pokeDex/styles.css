@@ -23,6 +23,7 @@ h1 {
 }
 
 .poke-container {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: space-between;
@@ -51,6 +52,9 @@ h1 {
 .pokemon .img-container img {
   margin-top: 20px;
   max-width: 90%;
+}
+.pokemon :hover {
+  transform: scale(1.5);
 }
 
 .pokemon .info {
