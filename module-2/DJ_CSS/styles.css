@@ -1,6 +1,6 @@
 /* Box Width & Height */
 .boxElement {
-  width: 100px;
+  width: 110px;
   height: 100px;
 }
 .wrapper {
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 .wrapper * {
-  height: 200px;
+  height: 80px;
   border: 1px solid black;
   background-color: black;
   transition-property: background-color;
@@ -42,24 +42,40 @@
 
 #boxElement3 {
   background-color: rebeccapurple;
+  border-radius: 10px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: 10;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Element3 Transition */
 #boxElement3:hover {
   opacity: 0.8;
-  background-color: rgb(13, 100, 13);
+  background-color: rgb(6, 17, 6);
   border-radius: 2rem;
   transition: linear 500ms;
 }
 
 #boxElement4 {
   background-color: cyan;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 /* Element4 Transition */
 #boxElement4:hover {
-  border-width: 30px;
-  width: 150px;
-  background-color: white;
+  background-color: #ffcccc;
+  /* width: 80px; */
+  height: 80px;
+  border-radius: 12%;
+  transform: rotate(720deg);
 }
 #boxElement5 {
   background-color: blue;
@@ -82,14 +98,24 @@
   border: solid 5px white;
   animation: bounce 1s;
 }
+
 @keyframes bounce {
   39% {
-    transform: translateY(100px);
+    transform: translateY(40px);
   }
   20% {
-    transform: translateY(-100px);
+    transform: translateY(-75px);
   }
   50% {
     transform: translateY(30px);
   }
+}
+#risingUp {
+  display: none;
+}
+embed {
+  color: transparent;
+  width: 90%;
+  height: 90%;
+  border-radius: 12rem;
 }
