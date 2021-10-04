@@ -1,0 +1,95 @@
+/* Box Width & Height */
+.boxElement {
+  width: 100px;
+  height: 100px;
+}
+.wrapper {
+  margin: 25px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 10%);
+  justify-content: center;
+}
+.wrapper * {
+  height: 200px;
+  border: 1px solid black;
+  background-color: black;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  border: solid 5px white;
+  transition: all 1s;
+}
+/* Element 1 */
+#boxElement1 {
+  background-color: yellow;
+}
+/* Transition Element 1 */
+#boxElement1:hover {
+  transition-duration: 1s;
+  background-color: red;
+}
+#boxElement2 {
+  background-color: orange;
+}
+/* Element 2 Transitions */
+
+#boxElement2:hover {
+  background-color: rgb(250, 135, 179);
+  border-radius: 12rem;
+  transition: linear 1s;
+}
+
+#boxElement3 {
+  background-color: rebeccapurple;
+}
+
+/* Element3 Transition */
+#boxElement3:hover {
+  opacity: 0.8;
+  background-color: rgb(13, 100, 13);
+  border-radius: 2rem;
+  transition: linear 500ms;
+}
+
+#boxElement4 {
+  background-color: cyan;
+}
+/* Element4 Transition */
+#boxElement4:hover {
+  border-width: 30px;
+  width: 150px;
+  background-color: white;
+}
+#boxElement5 {
+  background-color: blue;
+}
+
+/* Element5 Transition */
+#boxElement5:hover {
+  color: #90ff59;
+  border: yellow 1px;
+  background: rgb(182, 74, 74);
+  border: solid 5px rgb(17, 2, 2);
+  border-width: 9px;
+}
+#boxElement6 {
+  background-color: green;
+}
+/* Element6 Transition */
+#boxElement6:hover {
+  background-color: dodgerblue;
+  border: solid 5px white;
+  animation: bounce 1s;
+}
+@keyframes bounce {
+  39% {
+    transform: translateY(100px);
+  }
+  20% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
