@@ -53,7 +53,7 @@ h1 {
   margin-top: 20px;
   max-width: 90%;
 }
-.pokemon :hover {
+.pokemon .img-container :hover {
   transform: scale(1.5);
 }
 
