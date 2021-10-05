@@ -128,16 +128,4 @@ function voterResults(arr) {
 
 console.log(voterResults(voters)); // Returned value shown below:
 
-/* Git Hub Info */
-function getGithubInfo(zmunson85) {
-    var url = 'https://api.github.com/users/' + zmunson85;
-
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET', url, false);
-    xmlhttp.send();
-
-    var data = xmlhttp.responseText;
-
-    console.log(data);
-}
 
