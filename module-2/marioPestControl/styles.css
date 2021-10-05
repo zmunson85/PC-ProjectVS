@@ -1,3 +1,13 @@
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+p {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
 .titleDesc {
   font-size: 20px;
   color: yellow;
@@ -250,6 +260,7 @@ html {
   position: relative;
   top: 30%;
   height: 10%;
+  border-radius: 12rem;
 }
 #coin {
   height: 15%;
@@ -297,26 +308,29 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 #submit {
-  width: 40%;
+  max-width: 50%;
   font-size: 25px;
 }
 #total {
-  font-size: 25px;
-  max-width: 80%;
+  font-size: 20px;
   color: yellow;
   background-color: rgb(25, 89, 186);
+  word-wrap: break-word;
 }
 #G-total {
   font-size: 25px;
   max-width: 80%;
+  border-radius: 2rem;
 }
 #BB-total {
   font-size: 25px;
   max-width: 80%;
+  border-radius: 2rem;
 }
 #CC-total {
   font-size: 25px;
   max-width: 80%;
+  border-radius: 2rem;
 }
 #bobombsTotal {
   height: 40px;
