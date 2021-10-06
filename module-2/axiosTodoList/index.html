@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Axios Todo List</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <form name="inputForm">
+            <header>Axios~Todo List</header>
+            <h2>Add a new item to the List:</h2>
+            <label for="toDoTitle"> Todo Name:</label><input id="toDoTitle" type="text" name="title" placeholder="Title"
+                required />
+            Enter A Price:<input type="number" name="price" placeholder="Price" required />
+            Enter A Description:<input type="text" name="description" placeholder="Description" required />
+            Add image URL:<input type="text" name="image" placeholder="imgUrl" required />
+            <button class="submit">Submit</button>
+            <div class="listWrapper">
+
+                <h1>Dynamic List</h1>
+
+                <ul id='myList'>
+
+                </ul>
+            </div>
+
+
+        </form>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+header {
+  color: rgb(26, 114, 26);
+  font-size: 30px;
+}
+.wrapper {
+  position: relative;
+  top: 2%;
+  left: 35%;
+  width: 40%;
+}
+.listWrapper {
+  justify-content: space-around;
+}
+body {
+  background-color: rgb(31, 31, 31);
+  color: whitesmoke;
+}
+
+header {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  position: static;
+  padding-bottom: 35px;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  color: rgb(26, 114, 26);
+  text-align: center;
+  font-size: 50px;
+}
+
+form {
+  background-color: black;
+  position: static;
+  display: block;
+  padding: 20px;
+}
+
+form input {
+  display: block;
+  padding: 15px 15px 15px 10px;
+  margin: 0px 20px 20px 10px;
+  background-color: rgb(26, 114, 26);
+  border-radius: 1rem;
+}
+button {
+  padding: 10px 15px 10px 15px;
+  margin: 0px 20px 20px 10px;
+  background-color: rgb(26, 114, 26);
+  color: whitesmoke;
+  transition: background-color 0.5s, color 0.5s;
+  box-shadow: 3px 2px rgb(21, 48, 21);
+  border-radius: 1rem;
+}
+button:hover {
+  background-color: whitesmoke;
+  color: rgb(28, 37, 56);
+}
+
+input[name="description"] {
+  width: 60%;
+}
+
+input[name="image"] {
+  width: 60%;
+}
+
+h2 {
+  font-size: 25px;
+  color: rgb(26, 114, 26);
+}
+ul {
+  padding-left: 0;
+}
+ul li {
+  background-color: rgb(53, 53, 53);
+  border: 1px solid black;
+  box-shadow: 2px 5px rgb(26, 114, 26);
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  list-style: none;
+}
+
+li img {
+  box-shadow: 5px 5px rgb(124, 123, 123);
+  border-radius: 1rem;
+  max-width: 80%;
+  position: relative;
+  left: 5%;
+}
+li input {
+  display: block;
+  padding: 10px;
+  background-color: rgb(26, 114, 26);
+  color: whitesmoke;
+}
+#completed {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+#price {
+  background-image: url("assets/coin.png");
+  background-size: 20px 25px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  height: 25px;
+  width: 20px;
+  color: yellow;
+}
+li button {
+  display: block;
+}
+.submit {
+  position: relative;
+  left: 40%;
+}
