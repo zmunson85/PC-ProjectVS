@@ -3,6 +3,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   justify-content: center;
 }
+
 header {
   color: rgb(26, 114, 26);
   font-size: 30px;
@@ -17,7 +18,7 @@ header {
   justify-content: space-around;
 }
 body {
-  background-color: rgb(31, 31, 31);
+  background-color: black;
   color: whitesmoke;
 }
 
