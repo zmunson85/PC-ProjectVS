@@ -36,3 +36,9 @@ getCount('abracadabra')
 getCount('pear tree')
 getCount('o a kak ushakov lil vo kashu kakao')
 getCount('my pyx')
+
+
+
+
+
+
