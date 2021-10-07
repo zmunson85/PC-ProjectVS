@@ -77,12 +77,9 @@ p {
   color: chartreuse;
 }
 
-ul {
-  padding-left: 0;
-}
 ul li {
   list-style: none;
-  background-color: rgb(53, 53, 53);
+  background-color: black;
   border: 20px solid black;
   box-shadow: 2px 5px rgb(26, 114, 26);
   padding-left: 20px;
@@ -95,6 +92,7 @@ li img {
   box-shadow: 8px 7px rgb(124, 123, 123);
   border-radius: 1rem;
   max-width: 80%;
+  max-height: 80%;
   position: relative;
   left: 20%;
 }
