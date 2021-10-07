@@ -12,14 +12,14 @@ function listData(data) {
 
         document.getElementById('myList').appendChild(newLi)
 
-        const h2 = document.createElement('h2')
-        h2.textContent = data[i].title
-        newLi.appendChild(h2)
+        const h1 = document.createElement('h1')
+        h1.textContent = data[i].title
+        newLi.appendChild(h1)
 
         const img = document.createElement('img')
         img.setAttribute("src", data[i].imgUrl)
-        img.setAttribute("width", "450")
-        img.setAttribute("height", "325")
+        img.setAttribute("width", "535px")
+        img.setAttribute("height", "425px")
         newLi.appendChild(img)
 
         const description = document.createElement('p')
@@ -28,11 +28,13 @@ function listData(data) {
 
         const price = document.createElement('p')
         price.setAttribute('id', 'price')
-        price.textContent = `${data[i].price}`
+        price.textContent = `${data[i].price} `
         newLi.appendChild(price)
 
         const completed = document.createElement('input')
         completed.setAttribute("type", "checkbox")
+        completed.style.height = '30px'
+        completed.style.width = '30px'
         completed.setAttribute("name", "completed")
         completed.setAttribute("id", "completed")
 
@@ -43,25 +45,37 @@ function listData(data) {
         newLi.appendChild(completeLabel)
 
         completed.addEventListener('change', function (e) {
+            /* submit will refresh the page, this will prevent that */
             e.preventDefault()
 
             if (this.checked) {
                 axios.put(`https://api.vschool.io/zacharymunson/todo/${data[i]._id}`, { 'completed': true })
                     .then(res => console.log(res))
                     .catch(err => console.log(err))
-                h2.style.textDecoration = 'line-through'
+                /* Line through after click on completed check box */
+                h1.style.textDecoration = 'line-through'
+                h1.style.color = 'red'
             } else {
                 axios.put(`https://api.vschool.io/zacharymunson/todo/${data[i]._id}`, { 'completed': false })
                     .then(res => getData())
                     .catch(err => console.log(err))
-                h2.style.textDecoration = 'initial'
+                /* uncheck-(no line through return to initial state) */
+                h1.style.textDecoration = 'initial'
             }
         })
+
+        const editItem = document.createElement('button')
+        editItem.setAttribute('type', 'button')
+        editItem.setAttribute('id', 'editButton')
+        editItem.textContent = 'Edit'
+        newLi.appendChild(editItem)
 
         const deleteItem = document.createElement('button')
         deleteItem.setAttribute('type', 'button')
         deleteItem.setAttribute('id', 'deleteButton')
-        deleteItem.textContent = 'Delete'
+        deleteItem.textContent = 'X'
+        deleteItem.style = 'width: 20%; background-color: red;'
+
         newLi.appendChild(deleteItem)
 
         deleteItem.addEventListener('click', function (e) {
@@ -72,11 +86,7 @@ function listData(data) {
                 .catch(err => console.log(err))
         })
 
-        const editItem = document.createElement('button')
-        editItem.setAttribute('type', 'button')
-        editItem.setAttribute('id', 'editButton')
-        editItem.textContent = 'Edit'
-        newLi.appendChild(editItem)
+
 
         editItem.addEventListener('click', function (e) {
             e.preventDefault()
@@ -94,20 +104,27 @@ function listData(data) {
             editTitle.value = editTitle.placeholder
             editInfo.appendChild(editTitle)
 
+            const descLabel = document.createElement('label')
+            descLabel.textContent = 'Description :'
             const editDesc = document.createElement('input')
             editDesc.setAttribute('name', 'editDesc')
             editDesc.setAttribute('type', 'text')
             editDesc.setAttribute('placeholder', `${data[i].description}`)
             editDesc.value = editDesc.placeholder
             editInfo.appendChild(editDesc)
+            /* add Label Dynamically */
 
+            const priceLabel = document.createElement('label')
+            priceLabel.textContent = 'Price :'
             const editPrice = document.createElement('input')
             editPrice.setAttribute('name', 'editPrice')
             editPrice.setAttribute('type', 'number')
             editPrice.setAttribute('placeholder', `${data[i].price}`)
             editPrice.value = editPrice.placeholder
             editInfo.appendChild(editPrice)
-
+            /* add Label Dynamically */
+            const imgLabel = document.createElement('label')
+            imgLabel.textContent = 'Image :'
             const editImg = document.createElement('input')
             editImg.setAttribute('name', 'editImg')
             editImg.setAttribute('type', 'text')
@@ -115,17 +132,17 @@ function listData(data) {
             editImg.value = editImg.placeholder
             editInfo.appendChild(editImg)
 
-            h2.replaceWith(newLabel, editTitle)
-            description.replaceWith(editDesc)
-            price.replaceWith(editPrice)
-            img.replaceWith(editImg)
+            h1.replaceWith(newLabel, editTitle)
+            description.replaceWith(descLabel, editDesc)
+            price.replaceWith(priceLabel, editPrice)
+            img.replaceWith(imgLabel, editImg)
 
-            const submitEdit = document.createElement('button')
-            submitEdit.setAttribute('name', 'submitEdit')
-            submitEdit.textContent = "Submit edit"
-            editItem.replaceWith(submitEdit)
+            const save = document.createElement('button')
+            save.setAttribute('name', 'save')
+            save.textContent = "Save"
+            editItem.replaceWith(save)
 
-            submitEdit.addEventListener('click', function (e) {
+            save.addEventListener('click', function (e) {
                 e.preventDefault()
                 /* Set up edit functionality using the object notation */
                 axios.put(`https://api.vschool.io/zacharymunson/todo/${data[i]._id}`, {

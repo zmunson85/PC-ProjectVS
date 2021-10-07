@@ -12,18 +12,23 @@
         <form name="inputForm">
             <header>Axios~Todo List</header>
             <h2>Add a new item to the List:</h2>
+
             <label for="toDoTitle"> Todo Name:</label><input id="toDoTitle" type="text" name="title" placeholder="Title"
                 required />
-            Enter A Price:<input type="number" name="price" placeholder="Price" required />
-            Enter A Description:<input type="text" name="description" placeholder="Description" required />
-            Add image URL:<input type="text" name="image" placeholder="imgUrl" required />
-            <button class="submit">Submit</button>
+
+            <label for="toDoPrice"> Enter A Price:</label><input id="toDoPrice" type="number" name="price"
+                placeholder="Price" required />
+
+            <label for="toDoDesc"> Enter A Description:</label><input id="toDoDesc" type="text" name="description"
+                placeholder="Description" required />
+
+            <label for="toDoImg"> Add image URL:</label><input id="toDoImg" type="text" name="image"
+                placeholder="imgUrl" required />
+            <button class="submit">Create New</button>
+            <!-- Dynamic Rendered List Items -->
             <div class="listWrapper">
-
                 <h1>Dynamic List</h1>
-
                 <ul id='myList'>
-
                 </ul>
             </div>
 
