@@ -11,36 +11,45 @@ function listData(data) {
         const newLi = document.createElement('li')
 
         document.getElementById('myList').appendChild(newLi)
-
+        /* New To Do Title */
         const h1 = document.createElement('h1')
         h1.textContent = data[i].title
         newLi.appendChild(h1)
 
+
+        /* Image */
         const img = document.createElement('img')
         img.setAttribute("src", data[i].imgUrl)
         img.setAttribute("width", "535px")
         img.setAttribute("height", "425px")
         newLi.appendChild(img)
 
+        /* Description */
         const description = document.createElement('p')
         description.textContent = `Description: ${data[i].description}`
         newLi.appendChild(description)
 
+        /* Price */
         const price = document.createElement('p')
         price.setAttribute('id', 'price')
         price.textContent = `${data[i].price} `
         newLi.appendChild(price)
 
+
+
+        /* CheckBox Complete */
         const completed = document.createElement('input')
         completed.setAttribute("type", "checkbox")
+
         completed.style.height = '30px'
         completed.style.width = '30px'
         completed.setAttribute("name", "completed")
         completed.setAttribute("id", "completed")
-
+        /* Label */
         const completeLabel = document.createElement('label')
         completeLabel.setAttribute('for', 'completed')
-        completeLabel.textContent = 'Completed'
+        completeLabel.textContent = '-Mark Complete '
+        completeLabel.style = 'font-size: 25px;'
         newLi.appendChild(completed)
         newLi.appendChild(completeLabel)
 
@@ -63,13 +72,15 @@ function listData(data) {
                 h1.style.textDecoration = 'initial'
             }
         })
-
+        /* Edit Button after New Li Is Created */
         const editItem = document.createElement('button')
         editItem.setAttribute('type', 'button')
         editItem.setAttribute('id', 'editButton')
         editItem.textContent = 'Edit'
         newLi.appendChild(editItem)
 
+
+        /* Delete Button, X made it longer in width and red background with x */
         const deleteItem = document.createElement('button')
         deleteItem.setAttribute('type', 'button')
         deleteItem.setAttribute('id', 'deleteButton')

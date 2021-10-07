@@ -11,8 +11,9 @@ header {
 .wrapper {
   position: relative;
   top: 2%;
-  left: 15%;
-  width: 50%;
+  left: 5%;
+  right: 5%;
+  width: 100%;
 }
 .listWrapper {
   justify-content: space-around;
@@ -26,7 +27,7 @@ header {
   font-size: 60px;
   text-transform: uppercase;
   font-family: Georgia, "Times New Roman", Times, serif;
-  position: static;
+  /* position: static; */
   padding-bottom: 35px;
 }
 
@@ -40,13 +41,11 @@ h1 {
 
 form {
   background-color: black;
-  position: relative;
-  left: 20%;
   align-items: center;
 }
 
 form input {
-  display: block;
+  display: flex;
   padding: 15px 15px 15px 10px;
   margin: 0px 20px 20px 10px;
   background-color: rgb(26, 114, 26);
@@ -74,13 +73,10 @@ input[name="image"] {
   width: 60%;
 }
 p {
-  font-size: 15px;
+  font-size: 35px;
   color: chartreuse;
 }
-h1 {
-  font-size: 25px;
-  color: rgb(26, 114, 26);
-}
+
 ul {
   padding-left: 0;
 }
@@ -96,20 +92,20 @@ ul li {
 }
 
 li img {
-  box-shadow: 5px 5px rgb(124, 123, 123);
+  box-shadow: 8px 7px rgb(124, 123, 123);
   border-radius: 1rem;
-  margin-left: 10%;
+  max-width: 80%;
+  position: relative;
+  left: 20%;
 }
 li input {
   display: block;
   padding: 10px;
   background-color: rgb(26, 114, 26);
-  color: whitesmoke;
+  color: rgba(245, 245, 245, 0.726);
 }
 #completed {
   display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 15px;
 }
 
 #price {
@@ -122,7 +118,8 @@ li input {
   color: rgb(19, 161, 31);
 }
 li button {
-  display: block;
+  display: inline-block;
+  justify-content: space-between;
 }
 .submit {
   position: relative;
