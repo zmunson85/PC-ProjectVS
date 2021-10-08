@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 
-/* get api key for youtube data API *API EXPOSED/BUT RESTRICTED TO YOUTUBE ONLY* */
-const API = 'AIzaSyAEf4CvzZHF51GL0qvdkNJxfuMDgrP1Ok4';
-/* Pick the Youtube Channel by entering channelID as string value*/
-const channelID = 'UC4mLlRa_dezwvytudo9s1sw';
-const result = 25;
+const API = 'AIzaSyBpq_DxjOulGG2yc_plstK1iEc8aP1sM4c'
+const channelID = 'UCXgGY0wkgOzynnHvSEVmE3A'
+const result = 10;
 
-/* Destructured URL using this Large URL */
-// https://www.googleapis.com/youtube/v3/search?key=AIzaSyAEf4CvzZHF51GL0qvdkNJxfuMDgrP1Ok4&channelId=UCFbNIlppjAuEX4znoulh0Cw&part=snippet,id&order=date&maxResults=10
-
-/*  */
-
+// https://www.googleapis.com/youtube/v3/search?key=AIzaSyBpq_DxjOulGG2yc_plstK1iEc8aP1sM4c&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=10
 
 var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
 
@@ -20,7 +14,7 @@ class Youtube extends Component {
         super(props);
 
         this.state = {
-            videoLink: []
+            resultyt: []
         };
         this.clicked = this.clicked.bind(this);
     }
@@ -28,9 +22,9 @@ class Youtube extends Component {
         fetch(finalURL)
             .then((response) => response.json())
             .then((responseJson) => {
-                console.log(responseJson);
-                const videoLink = responseJson.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
-                this.setState({ videoLink });
+                // console.log(responseJson);
+                const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId);
+                this.setState({ resultyt });
             })
             .catch((error) => {
                 console.error(error);
@@ -40,16 +34,15 @@ class Youtube extends Component {
 
 
     render() {
-        // console.log(finalURL);
-        console.log(this.state.videoLink);
+        console.log(finalURL);
+        console.log(this.state.resultyt);
 
         return (
             <div>
                 <button onClick={this.clicked}>Get youtube videos</button>
-
                 {
-                    this.state.videoLink.map((link, i) => {
-                        console.log(link);
+                    this.state.resultyt.map((link, i) => {
+                        // console.log(link);
                         // eslint-disable-next-line jsx-a11y/iframe-has-title
                         var frame = <div key={i} className="youtube"><iframe width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
                         return frame;
@@ -64,5 +57,3 @@ class Youtube extends Component {
 }
 
 export default Youtube;
-
-
