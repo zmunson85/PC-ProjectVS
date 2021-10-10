@@ -55,10 +55,10 @@ console.log(parseSentence(trip));
 /* ---------------------------------------------------------------
 */
 function returnFirst(items) {
-    const firstItem = items;     /*change this line to be es6*/
+    const [firstItem] = items;     /*change this line to be es6*/
     return firstItem;
 }
-
+console.log(returnFirst(['a', 'b', 'c']));
 
 
 
@@ -120,7 +120,7 @@ function product(a, b, c, d, e) {
         return acc * number;
     }, 1)
 }
-
+console.log(product(1, 2, 3, 4, 5))
 
 
 
