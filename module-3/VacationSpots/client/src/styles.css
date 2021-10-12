@@ -7,40 +7,45 @@ header {
   background-color: black;
   color: white;
   border-radius: 2rem;
-  margin: 30px;
+  margin: 10%;
 }
-.heading {
-  margin-left: 32%;
+header {
+  justify-content: center;
+  display: flex;
+  margin: 2em;
+  font-size: 34px;
 }
 .imgUrl {
+  justify-content: center;
   position: relative;
   left: 10%;
-  max-height: 80%;
+  max-height: 100%;
   max-width: 80%;
   border-radius: 2rem;
 }
 .cardBody {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style: none;
 }
 .title {
+  justify-content: center;
+  display: flex;
   font-size: x-large;
-  position: relative;
-  left: 25%;
-  padding: 20px;
+  padding: 3%;
 }
 
 li {
+  display: flex;
   font-size: x-large;
-  padding: 20px;
+  padding: 3%;
 }
-/* .location {
-  background-color: green;
-  align-items: center;
-  align-content: center;
+.location {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
   text-align: center;
   border-radius: 2rem;
   width: 20%;
   resize: both;
-} */
+}
