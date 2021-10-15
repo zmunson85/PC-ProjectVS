@@ -33,7 +33,7 @@ class Switches extends React.Component {
 
     partyDJ() {
         this.setState({
-            boxes: ['purple', 'green', this.state.boxes[2], this.state.boxes[3]]
+            boxes: ['purple', 'Cyan', this.state.boxes[2], this.state.boxes[3]]
         })
     }
     proDJ() {
