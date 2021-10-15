@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
+//look up dotenv
 const API = 'AIzaSyBpq_DxjOulGG2yc_plstK1iEc8aP1sM4c'
 const channelID = 'UCXooY16cma-y8ns4Oa8cuOA'
-const result = 20;
+const result = 10;
 
 // https://www.googleapis.com/youtube/v3/search?key=AIzaSyBpq_DxjOulGG2yc_plstK1iEc8aP1sM4c&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=10
 

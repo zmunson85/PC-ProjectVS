@@ -1,45 +1,42 @@
-* {
-  margin: 0;
-}
-.flex-container {
-  align-items: center;
-  max-width: 80vw;
-  display: block;
-  background-color: DodgerBlue;
+body {
+  background-color: whitesmoke;
 }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  margin: 3%;
-  padding: 5%;
+.todo-list {
+  background-color: white;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #efefef;
+  box-shadow:
+  /* The top layer shadow */ 0 1px 1px rgba(0, 0, 0, 0.15),
+    /* The second layer */ 0 10px 0 -5px #eee,
+    /* The second layer shadow */ 0 10px 1px -4px rgba(0, 0, 0, 0.15),
+    /* The third layer */ 0 20px 0 -10px #eee,
+    /* The third layer shadow */ 0 20px 1px -9px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  width: 70%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: #333333;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
   font-size: 30px;
 }
-input {
-  height: 15vw;
-  width: 15vh;
-}
-p {
-  text-align: center;
-  font-family: "Bowlby One SC", cursive;
-  font-size: 5.5vw;
-}
-#delete {
-  position: absolute;
-  left: 79%;
-  top: 2vh;
-  bottom: 11vh;
-  width: 6vw;
-  height: 6vh;
-}
-.deleteTest {
-  position: relative;
-}
-#delete {
-  background-color: red;
-  background-image: url("https://cdn.iconscout.com/icon/premium/png-256-thumb/x-2036511-1740165.png");
-  background-size: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 8vh;
-  width: 8vw;
+
+input[type="checkbox"]:focus {
+  outline: 0;
 }

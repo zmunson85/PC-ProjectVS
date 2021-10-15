@@ -1,6 +1,5 @@
 import React from 'react';
 import VacationCard from './VacationCard';
-// import VisitColor from './Output'
 import data from './data'
 function App() {
     const Cards = data.map(item => <VacationCard key={item.place} location={item} season={item.timeToGo} price={item.price} />)
@@ -9,8 +8,6 @@ function App() {
         <div>
             <header>Which Vacation Destination Suits You Best?</header>
             {Cards}
-
-            {/* {Color} */}
         </div>
     )
 }

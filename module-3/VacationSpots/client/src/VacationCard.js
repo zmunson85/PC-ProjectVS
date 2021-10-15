@@ -29,7 +29,7 @@ function VacationCard(props) {
     } else if (props.season === 'Fall') {
         color = 'orangered'
     } else if (props.season === 'Spring') {
-        color = 'pink'
+        color = 'cyan'
     } else {
         color = 'darkgreen'
     }
@@ -39,13 +39,13 @@ function VacationCard(props) {
 
     return (
         <>
-            <Card className='CardDiv'>
-                <CardBody style={{ backgroundColor: color }}>
+            <Card className='CardDiv' style={{ backgroundColor: color, borderRadius: '12rem' }}>
+                <CardBody >
                     <CardTitle className='title'>{props.location.place}</CardTitle>
                     <CardImg top width="100%" src={props.location.imgUrl} className="imgUrl" alt="Location"></CardImg>
                     <ListGroup className='cardBody'>
                         <ListGroupItem>Price: {price}</ListGroupItem>
-                        <ListGroupItem className='location'>Best Time of year: {props.location.timeToGo} </ListGroupItem>
+                        <ListGroupItem className='location'>Go This: {props.location.timeToGo} </ListGroupItem>
                     </ListGroup>
                 </CardBody>
             </Card>
