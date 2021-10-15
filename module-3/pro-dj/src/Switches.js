@@ -33,7 +33,7 @@ class Switches extends React.Component {
 
     partyDJ() {
         this.setState({
-            boxes: ['purple', 'purple', this.state.boxes[2], this.state.boxes[3]]
+            boxes: ['purple', 'green', this.state.boxes[2], this.state.boxes[3]]
         })
     }
     proDJ() {
@@ -52,7 +52,8 @@ class Switches extends React.Component {
     }
     bigTimeDJ() {
         this.setState({
-            boxes: ['blue', 'red', 'red', 'blue']
+            //this goes big and makes more box elements to modify for the amount of colors added, this is a bug but still kind of a cool add on for big time dj...
+            boxes: ['orange', 'red', 'yellow', 'blue', 'green', 'purple', 'tan', 'brown', 'black', 'white']
         })
     }
     playTune() {
@@ -64,6 +65,7 @@ class Switches extends React.Component {
     }
 
     render() {
+        //this will bring state value to the color of each box
         const boxes = this.state.boxes.map(box => {
             return < BoxElement color={box} />
         })
@@ -71,13 +73,15 @@ class Switches extends React.Component {
             /* On click event will change the state of the original 4 white boxes */
             <div className="container">
                 {boxes}
-                <button onClick={this.smallTimeDJ}>Small Time DJ</button>
-                <button onClick={this.partyDJ}>Party DJ</button>
-                <button onClick={this.proDJ}>Pro DJ # 1</button>
-                <button onClick={this.proDJ2}>Pro DJ # 2</button>
-                <button onClick={this.bigTimeDJ}>Big Time DJ</button>
-                <button onClick={this.playTune}>Play Sound</button>
-                <button onClick={this.refreshPage}>Stop And Restart</button>
+                <button className='btn' onClick={this.smallTimeDJ}>Small Time DJ</button>
+                <button className='btn' onClick={this.partyDJ}>Party DJ</button>
+                <button className='btn' onClick={this.proDJ}>Pro DJ # 1</button>
+                <button className='btn' onClick={this.proDJ2}>Pro DJ # 2</button>
+                <button className='btn' onClick={this.bigTimeDJ}>Big Time DJ</button>
+                <div className='container2'>
+                    <button className='btn' onClick={this.playTune}>Play Sound</button>
+                    <button className='btn' onClick={this.refreshPage}>Stop And Restart</button>
+                </div>
             </div>
         )
     }
