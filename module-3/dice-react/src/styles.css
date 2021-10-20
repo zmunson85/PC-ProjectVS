@@ -1,0 +1,17 @@
+.title {
+  align-items: center;
+  display: block;
+}
+.diceContainer {
+  display: flex;
+}
+.die {
+  font-size: x-large;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: 20px;
+}
+button {
+  display: flex;
+}

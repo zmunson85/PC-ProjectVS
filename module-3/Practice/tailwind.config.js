@@ -1,16 +1,26 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: {
+    enabled: true,
+    content: ['./dist/**/*.html'],
+  },
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     debugScreens: {
       position: ['top', 'left'],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        headline: ['Oswald']
+      },
+      colors: {
+        mainColor: '#212f49'
+      }
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [
-    require('tailwindcss-debug-screens')
-  ],
+    require('tailwindcss-debug-screens'),
+  ]
 }
