@@ -43,7 +43,7 @@ class RollDice extends Component {
 
             // Set rolling to false again when time over
             this.setState({ rolling: false })
-        }, 1000)
+        }, 700)
     }
 
 
@@ -61,6 +61,7 @@ class RollDice extends Component {
     }
 
     render() {
+
         const handleBtn = this.state.rolling ?
             'RollDice-rolling' : ''
         const { die1, die2, die3, die4, die5, rolling } = this.state
