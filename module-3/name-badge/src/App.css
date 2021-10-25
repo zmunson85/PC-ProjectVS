@@ -1,5 +1,13 @@
-.inputDiv {
-  width: 30%;
+.card {
+  border: solid black 3px;
+  border-radius: 1rem;
+  width: 45%;
+  margin: auto;
+}
+#Return {
+  border: solid black 3px;
+  border-radius: 1rem;
+  width: 100%;
   margin: auto;
 }
 .submitButton {
@@ -7,7 +15,7 @@
   background-color: grey;
 }
 .returnDiv {
-  width: 30vw;
+  width: 30%;
   height: 300px;
   margin: auto;
 }
@@ -15,4 +23,8 @@ li {
   width: 200px;
   list-style: none;
   display: flex;
+}
+.userInfo {
+  margin-left: 10%;
+  width: 80%;
 }
