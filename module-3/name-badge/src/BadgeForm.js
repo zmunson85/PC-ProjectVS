@@ -1,55 +1,98 @@
 import React, { useState } from 'react'
 
 
-function BadgeForm() {
-    const [inputs, setInputs] = useState('')
-    return (
-        <div className='root'>
-            <header class="ccheader">
-                <h1>Print Name Badge Here</h1>
-            </header>
-            <div class="wrapper">
-                <form method="post" action="" class="ccform">
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="First Name" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="Last Name" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="Email" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="Phone" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="Place Of Birth" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
-                        <input class="ccformfield" type="text" placeholder="Favorite Food" />
-                    </div>
-                    <div class="ccfield-prepend">
-                        <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
-                        <textarea class="ccformfield" name="comments" rows="8" placeholder="Tell Us About YourSelf"></textarea>
-                    </div>
-                    <div class="ccfield-prepend">
-                        <input class="ccbtn" type="submit" value="Submit" />
-                    </div>
-                </form>
-            </div>
 
-            <div class="print">
-                <h2 className='output'>NEW BADGE PREVIEW</h2>
-                {inputs}
-            </div>
+
+const BadgeForm = () => {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState(Number);
+    const [placeOfBirth, setPlaceOfBirth] = useState("");
+    const [favoriteFood, setFavoriteFood] = useState("");
+    const [responseField, setResponseField] = useState("");
+    const [userInfo, setUserInfo] = useState([]);
+
+    return (
+        <div className="mainContainer">
+            <form>
+
+                <div className='inputDiv'>
+                    <input type='text' value={firstName} placeholder='What is your First Name' onChange={e => { setFirstName(e.target.value); }} required />
+
+
+                    <input type='text' value={lastName} placeholder='What is your Last Name' onChange={e => { setLastName(e.target.value); }} required />
+
+
+                    <input type='email' value={email} placeholder='Enter A Valid Email' onChange={e => { setEmail(e.target.value); }} required />
+
+
+                    <input type='phone' value={phone} placeholder='What is your Phone Number?' onChange={e => { setPhone(e.target.value); }} required />
+
+
+                    <input type='text' value={placeOfBirth} placeholder='Where were you born?' onChange={e => { setPlaceOfBirth(e.target.value); }} required />
+
+
+                    <input type='text' value={favoriteFood} placeholder='What Is your Favorite Food?' onChange={e => { setFavoriteFood(e.target.value); }} required />
+                    <textarea maxLength='100' value={responseField} onChange={e => { setResponseField(e.target.value); }} required></textarea>
+                </div>
+
+
+                <div className='returnDiv'>
+                    <input
+                        className='submitButton'
+                        type="button"
+                        value="Create Badge"
+                        onClick={e => {
+                            setUserInfo([
+                                ...userInfo,
+                                {
+                                    // Use the current size as ID (needed to iterate the list later)
+                                    id: userInfo.length + 1,
+                                    firstName: firstName,
+                                    lastName: lastName,
+                                    email: email,
+                                    phone: phone,
+                                    placeOfBirth: placeOfBirth,
+                                    favoriteFood: favoriteFood,
+                                    responseField: responseField
+
+                                }
+                            ]);
+                            setFirstName(""); // Clear the text box
+                            setLastName(""); // Clear the text box
+                            setEmail(""); // Clear the text box
+                            setPhone(""); // Clear the text box
+                            setPlaceOfBirth(""); // Clear the text box
+                            setFavoriteFood(""); // Clear the text box
+                            setResponseField(""); // Clear the text box
+                        }}
+                    />
+                    <ol>
+                        {userInfo.map(name => (
+                            <li key={name.id}>Full Name: {name.firstName.last} {name.lastName}
+                            </li>
+                        ))}
+                        {userInfo.map(name => (
+                            <li key={name.id}>Email: {name.email} </li>
+                        ))}
+                        {userInfo.map(name => (
+                            <li key={name.id}>Phone #: {name.phone} </li>
+                        ))}
+                        {userInfo.map(name => (
+                            <li key={name.id}>Place of Birth: {name.placeOfBirth} </li>
+                        ))}
+                        {userInfo.map(name => (
+                            <li key={name.id}>Favorite Food: {name.favoriteFood} </li>
+                        ))}
+                        {userInfo.map(name => (
+                            <li key={name.id}>Tell Us About Yourself: {name.responseField} </li>
+                        ))}
+                    </ol>
+                </div>
+            </form>
         </div>
-    )
-}
+    );
+};
 
 export default BadgeForm

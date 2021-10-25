@@ -7,15 +7,14 @@
 /* Shows each dice in one row */
 .RollDice-container {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  margin: auto;
 }
 /* Stylling rolldice button */
 button {
   background-color: transparent;
   border: none;
   cursor: grab;
-  margin: 10px;
+  margin: auto;
 }
 #RollDice {
   width: 15em;

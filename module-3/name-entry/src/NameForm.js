@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 
 const NameForm = () => {
-    const [inputs, setInputs] = useState("");
+    const [names, setNames] = useState("");
     const [nameList, setNameList] = useState([]);
 
     return (
         <div>
             <form>
-                <input
-                    type="text"
-                    value={inputs}
-                    placeholder="Enter Name"
-                    onChange={e => {
-                        setInputs(e.target.value);
-                    }}
-                />
+                <input type="text" value={names} placeholder="Enter Name" onChange={e => { setNames(e.target.value); }} />
+
                 <input
                     type="button"
                     value="Add To List"
@@ -24,16 +18,16 @@ const NameForm = () => {
                             {
                                 // Use the current size as ID (needed to iterate the list later)
                                 id: nameList.length + 1,
-                                inputs: inputs
+                                names: names
                             }
                         ]);
-                        setInputs(""); // Clear the text box
+                        setNames(""); // Clear the text box
                     }}
                 />
-                <h1 style={{ color: 'grey' }}>Preview: {inputs}</h1>
+                <h1 style={{ color: 'grey' }}>Preview: {names}</h1>
                 <ol>
                     {nameList.map(name => (
-                        <li key={name.id}>{name.inputs}</li>
+                        <li key={name.id}>{name.names}</li>
                     ))}
                 </ol>
             </form>
