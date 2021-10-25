@@ -14,12 +14,5 @@ for (let i = 0; i <= 100; i++) {
         //else is a catch all for all reamaing numbers that are not divisible by 5 or 3 in which case we print the number in that index. 
     } else
         console.log(output = i);
-    let result = output.map(item, index => {
-        console.log(item);
-        return index
-    })
-    return result
-
-
 
 }

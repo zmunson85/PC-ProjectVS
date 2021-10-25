@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Card } from 'react-bootstrap'
 
 
 
@@ -68,27 +69,14 @@ const BadgeForm = () => {
                             setResponseField(""); // Clear the text box
                         }}
                     />
-                    <ol>
+
+                    <Card>
                         {userInfo.map(name => (
-                            <li key={name.id}>Full Name: {name.firstName.last} {name.lastName}
-                            </li>
+                            <p key={name.id}>Full Name: {name.firstName.last} {name.lastName}
+                                Phone# : {name.phone}, Email: {name.email}, Place of Birth: {name.placeOfBirth}, Favorite Food: {name.favoriteFood}
+                            </p>
                         ))}
-                        {userInfo.map(name => (
-                            <li key={name.id}>Email: {name.email} </li>
-                        ))}
-                        {userInfo.map(name => (
-                            <li key={name.id}>Phone #: {name.phone} </li>
-                        ))}
-                        {userInfo.map(name => (
-                            <li key={name.id}>Place of Birth: {name.placeOfBirth} </li>
-                        ))}
-                        {userInfo.map(name => (
-                            <li key={name.id}>Favorite Food: {name.favoriteFood} </li>
-                        ))}
-                        {userInfo.map(name => (
-                            <li key={name.id}>Tell Us About Yourself: {name.responseField} </li>
-                        ))}
-                    </ol>
+                    </Card>
                 </div>
             </form>
         </div>
