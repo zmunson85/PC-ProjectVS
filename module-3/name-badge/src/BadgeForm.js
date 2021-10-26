@@ -4,7 +4,7 @@ import { Card, Row, Col } from 'react-bootstrap'
 
 
 
-const BadgeForm = () => {
+const BadgeForm = (props) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -14,23 +14,24 @@ const BadgeForm = () => {
     const [responseField, setResponseField] = useState("");
     const [userInfo, setUserInfo] = useState([]);
 
+
     return (
         <div className="mainContainer fluid">
             <form>
                 <Card>
                     <Row>
-                        <Col>
+                        <Col xs={6}>
                             <input className='userInfo' type='text' value={firstName} placeholder='What is your First Name' onChange={e => { setFirstName(e.target.value); }} />
                             <input className='userInfo' type='email' value={email} placeholder='Enter A Valid Email' onChange={e => { setEmail(e.target.value); }} />
                             <input className='userInfo' type='text' value={placeOfBirth} placeholder='Where were you born?' onChange={e => { setPlaceOfBirth(e.target.value); }} />
                         </Col>
-                        <Col>
+                        <Col xs={6}>
                             <input className='userInfo' type='text' value={lastName} placeholder='What is your Last Name' onChange={e => { setLastName(e.target.value); }} />
                             <input className='userInfo' type='phone' value={phone} placeholder='What is your Phone Number?' onChange={e => { setPhone(e.target.value); }} />
                             <input className='userInfo' type='text' value={favoriteFood} placeholder='What Is your Favorite Food?' onChange={e => { setFavoriteFood(e.target.value); }} />
                         </Col>
                     </Row>
-                    <textarea placeholder='Tell Us About Yourself' maxLength='100' value={responseField} onChange={e => { setResponseField(e.target.value); }} required></textarea>
+                    <textarea className='textArea' placeholder='Tell Us About Yourself' maxLength='100' value={responseField} onChange={e => { setResponseField(e.target.value); }} required></textarea>
 
                 </Card>
 
@@ -66,21 +67,20 @@ const BadgeForm = () => {
                         }}
                     />
 
-                    {userInfo.map(name => (
+                    {userInfo.map((name, id) => (
                         <>
                             <Card id='Return'>
-                                <Row>
-                                    <p key={name.id}>Full Name: {name.firstName} {name.lastName}</p>
-                                    <p key={name.id}>Phone: {name.phone}</p>
-                                    <p key={name.id}>Email: {name.email}</p>
-                                    <p key={name.id}>Place Of Birth: {name.placeOfBirth}</p>
-                                    <p key={name.id}>Favorite Food: {name.favoriteFood}</p>
+                                <Row key={name.id}>
+                                    <p >Full Name: {name.firstName} {name.lastName}</p>
+                                    <p >Phone: {name.phone}</p>
+                                    <p >Email: {name.email}</p>
+                                    <p >Place Of Birth: {name.placeOfBirth}</p>
+                                    <p >Favorite Food: {name.favoriteFood}</p>
+                                    <textarea className='textArea'>{name.responseField}</textarea>
                                 </Row>
                             </Card>
                         </>
                     ))}
-
-                    {/* Phone# : {name.phone}, Email: {name.email}, Place of Birth: {name.placeOfBirth}, Favorite Food: {name.favoriteFood} */}
                 </div>
             </form>
         </div>

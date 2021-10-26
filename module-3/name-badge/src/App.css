@@ -3,6 +3,7 @@
   border-radius: 1rem;
   width: 45%;
   margin: auto;
+  margin-bottom: 2px;
 }
 #Return {
   border: solid black 3px;
@@ -27,4 +28,8 @@ li {
 .userInfo {
   margin-left: 10%;
   width: 80%;
+}
+.textArea {
+  width: 90%;
+  margin: auto;
 }
