@@ -25,11 +25,12 @@ export default function HitList() {
             <div className='grid-container'
             >
                 {targets.map(result => (
-
-                    <li className='grid-item' key={result.name}>
-                        <img src={result.image} alt='apiContent'></img>
+                    //position div relative
+                    <div className='grid-item' key={result.name}>
+                        <img src={result.image} alt='apiContent' />
+                        {/* position absolute bottom zero to position at the bottom of the card. z index for h1 position */}
                         <h1 className='imgName'>{result.name}</h1>
-                    </li>
+                    </div>
                 ))}
             </div>
         </>
