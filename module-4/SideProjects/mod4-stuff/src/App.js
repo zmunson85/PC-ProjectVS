@@ -4,6 +4,7 @@ import Article from './Article'
 
 function App() {
     //default theme is set to light mode
+    //store this theme in context so the other components can consume the same context, lift state to parent and share with children
     const [theme, setTheme] = useState('light-theme');
 
     const toggleTheme = () => {
@@ -20,10 +21,13 @@ function App() {
     }, [theme])
 
     return <main>
+        <div style={{ position: 'relative', left: '80%' }} className='toggleDiv'>
+            <button onClick={toggleTheme} className='toggleBtn'>toggle 🌙</button>
+        </div>
         <nav>
             <div className='nav-center'>
                 <h1>Changing Themes</h1>
-                <button onClick={toggleTheme} className='btn'>toggle</button>
+                <h2>Using CSS Variables</h2>
             </div>
 
         </nav>
