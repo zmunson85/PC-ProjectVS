@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
 
 export const Meme = ({ template, onClick }) => {
     return (
         <img
-            style={{ width: 200 }}
             key={template.id}
             src={template.url}
-            alt={template.name}
+            alt={`${template.name} meme template`}
+            style={{ maxHeight: '300px', maxWidth: '300px' }}
             onClick={onClick}
         />
+
     );
 };

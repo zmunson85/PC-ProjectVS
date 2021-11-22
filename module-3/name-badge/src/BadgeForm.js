@@ -42,11 +42,11 @@ const BadgeForm = (props) => {
                         type="button"
                         value="Create Badge"
                         onClick={e => {
-                            setUserInfo([
-                                ...userInfo,
+                            setUserInfo(prevState => [
+                                ...prevState,
                                 {
                                     // Use the current size as ID (needed to iterate the list later)
-                                    id: userInfo.length + 1,
+                                    id: prevState.length + 1,
                                     firstName: firstName,
                                     lastName: lastName,
                                     email: email,
