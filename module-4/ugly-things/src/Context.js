@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Context = React.createContext();
 
@@ -8,29 +9,33 @@ const Provider = (props) => {
     const [isEditing, setIsEditing] = useState(false)
     const [newUserInput, setNewUserInput] = useState({ title: '' })
 
-    function handleChange(event) {
-        const { name, value } = event.target
-        setUserInput(prevUserInput => ({ ...prevUserInput, [name]: value }))
+    function handleChange(e) {
+        const { name, value } = e.target
+        setUserInput(userInput => ({ ...userInput, [name]: value }))
     }
 
-    function handleEditInputValue(event) {
-        const { name, value } = event.target
-        setIsEditing(prevUserInput => ({ ...prevUserInput, [name]: value }))
+    const handleNewUserInput = (e) => {
+        const { name, value } = e.target
+        setNewUserInput(prevState => ({ ...prevState, [name]: value }))
     }
 
-    handleSubmit(event){
-        event.preventDefault()
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const newThing = { ...userInput }
+        console.log(newThing)
         setUserInput(() => ({
             title: '',
             description: '',
             imgUrl: ''
         }))
-        axios.post('https://api.vschool.io/zachary-munson/thing', newThing).then(() => get()).catch(error => console.log(error))
+        axios.post('https://api.vschool.io/zachary-munson/thing', newThing).then(() => getUserData())
+            .catch(error => console.error(error))
     }
 
-    handleDelete(id){
-        axios.delete(`https://api.vschool.io/zachary-munson/thing/${id}`).then(() => getUserData()).catch(() => console.log(error))
+    function handleDelete(id) {
+        axios.delete(`https://api.vschool.io/zachary-munson/thing/${id}`)
+            .then(() => getUserData())
+            .catch(error => console.error(error.message))
     }
 
     function editThing(id, thingTitle) {
@@ -39,18 +44,41 @@ const Provider = (props) => {
     }
 
     function saveThing(id, thingTitle) {
-        setIsEditing(prevEdit => prevEdit = false)
+        console.log(id, thingTitle)
+        setIsEditing(prevState => prevState === false)
         const newTitle = { ...newUserInput }
-        console.log(newUserInput)
+        console.log(newTitle)
     }
 
 
     const getUserData = () => {
-        axios.get('https://api.vschool.io/zachary-munson/thing')
+        fetch('https://api.vschool.io/zachary-munson/thing')
             .then(res => res.json())
-            .then(data => {
-                userData => (setThingsList(() => [...userData])
-                ).catch(error => console.log(error.message))
+            .then(userData => {
+                (setThingsList(() => [...userData]))
+                // .catch(error => console.error(error.message))
             })
     }
+
+    useEffect(() => {
+        getUserData()
+    }, [])
+
+    return (
+        <Context.Provider
+            value={{
+                thingsList,
+                userInput,
+                isEditing,
+                newUserInput,
+                handleChange,
+                handleDelete,
+                handleSubmit,
+                editThing,
+                saveThing,
+                handleNewUserInput
+            }}>{props.children}</Context.Provider>
+    )
+
 }
+export { Provider, Context }
