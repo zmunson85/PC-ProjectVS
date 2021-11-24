@@ -41,11 +41,20 @@ const Provider = (props) => {
     function editThing(id, thingTitle) {
         console.log(id, thingTitle)
         setIsEditing(prevEdit => !prevEdit)
+        axios.put(`https://api.vschool.io/zachary-munson/thing/${id}`)
+            .then(res => {
+                console.log(id)
+            })
+        setNewUserInput(() => ({
+            title: '',
+            description: '',
+            imgUrl: ''
+        }))
     }
 
     function saveThing(id, thingTitle) {
         console.log(id, thingTitle)
-        setIsEditing(prevState => prevState === false)
+        setIsEditing()
         const newTitle = { ...newUserInput }
         console.log(newTitle)
     }

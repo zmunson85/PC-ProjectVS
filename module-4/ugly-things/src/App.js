@@ -13,9 +13,8 @@ function App() {
             title='Ugly-Things'
             description='User Provided Data'
           />
-          {/* < ThingsList /> */}
           <UserInputForm />
-          {/* < ThingsList /> */}
+          <ThingsList />
         </div>
 
       </div>
