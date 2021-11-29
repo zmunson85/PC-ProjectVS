@@ -2,7 +2,7 @@ import React from 'react'
 import { useGlobalContext } from './context'
 import { Link } from 'react-router-dom'
 const url =
-    'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/archive/a/ac/20121003093557%21No_image_available.svg/120px-No_image_available.svg.png'
 
 const Movies = () => {
     const { movies, isLoading } = useGlobalContext()

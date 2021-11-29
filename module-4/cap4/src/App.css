@@ -3,25 +3,25 @@ css variables visit this link for better instructions/https://www.joshwcomeau.co
 */
 
 :root {
-    /* dark shades of primary color*/
+    /* darker than primary color Variable 1*/
     --clr-primary-1: hsl(205, 86%, 17%);
     --clr-primary-2: hsl(205, 77%, 27%);
     --clr-primary-3: hsl(205, 72%, 37%);
     --clr-primary-4: hsl(205, 63%, 48%);
-    /* primary/main color */
+    /* primary/main color  variable 2*/
     --clr-primary-5: hsl(205, 78%, 60%);
-    /* lighter shades of primary color */
+    /* lighter than primary color for effect variable 3 */
     --clr-primary-6: hsl(205, 89%, 70%);
     --clr-primary-7: hsl(205, 90%, 76%);
     --clr-primary-8: hsl(205, 86%, 81%);
     --clr-primary-9: hsl(205, 90%, 88%);
     --clr-primary-10: hsl(205, 100%, 96%);
-    /* darkest grey - used for headings */
+    /* dark grey -headings  variable 4*/
     --clr-grey-1: hsl(209, 61%, 16%);
     --clr-grey-2: hsl(211, 39%, 23%);
     --clr-grey-3: hsl(209, 34%, 30%);
     --clr-grey-4: hsl(209, 28%, 39%);
-    /* grey used for paragraphs */
+    /* grey -paragraphs variable 5 */
     --clr-grey-5: hsl(210, 22%, 49%);
     --clr-grey-6: hsl(209, 23%, 60%);
     --clr-grey-7: hsl(211, 27%, 70%);
@@ -138,6 +138,10 @@ Form for search
     margin: 0 auto;
     margin-top: 5rem;
     margin-bottom: 3rem;
+}
+.about-div {
+    width: 80%;
+    margin: auto;
 }
 .form-input {
     width: 100%;
