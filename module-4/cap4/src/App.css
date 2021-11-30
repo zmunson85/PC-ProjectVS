@@ -140,9 +140,21 @@ Form for search
     margin-bottom: 3rem;
 }
 .about-div {
+    border: solid #222 2px;
     width: 80%;
     margin: auto;
 }
+.about-button {
+    height: 40px;
+}
+.about-link {
+    margin-left: 40%;
+}
+.description-h4 {
+    width: 80%;
+    margin: auto;
+}
+
 .form-input {
     width: 100%;
     border: transparent;
