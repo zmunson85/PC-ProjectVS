@@ -5,14 +5,14 @@ const uuid = require('uuid').v4;
 //fake data
 
 const vehicles = [
-    { type: 'car', make: 'Honda', model: 'Civic', _id: uuid() },
-    { type: 'car', make: 'BMW', model: 'M5', _id: uuid() },
-    { type: 'Truck', make: 'Chevrolet', model: 'Silverado', _id: uuid() },
-    { type: 'Truck', make: 'Ford', model: 'F150', _id: uuid() },
-    { type: 'Van', make: 'Honda', model: 'Oddessy ', _id: uuid() },
-    { type: 'Van', make: 'Dodge', model: 'Caravan', _id: uuid() },
-    { type: 'Motorcycle', make: 'Harley-Davidson', model: 'Street Glide', _id: uuid() },
-    { type: 'Motorcycle', make: 'Suzuki', model: 'GSXR-1000', _id: uuid() }
+    { type: 'car', make: 'honda', model: 'civic', _id: uuid() },
+    { type: 'car', make: 'bmw', model: 'm5', _id: uuid() },
+    { type: 'truck', make: 'chevrolet', model: 'silverado', _id: uuid() },
+    { type: 'truck', make: 'ford', model: 'f-150', _id: uuid() },
+    { type: 'van', make: 'honda', model: 'oddessy ', _id: uuid() },
+    { type: 'van', make: 'dodge', model: 'caravan', _id: uuid() },
+    { type: 'motorcycle', make: 'harley davidson', model: 'street glide', _id: uuid() },
+    { type: 'motorcycle', make: 'honda', model: 'cbr-1000', _id: uuid() }
 
 ]
 
@@ -29,12 +29,35 @@ vehicleRouter.route('/').get((req, res) => {
         res.send(`${newVehicle.vehicles} has been added to the list!`)
     })
 //let user search the list of previously entered items
-vehicleRouter.get('/search', (req, res) => {
-    const type = req.query.type;
-    //filter for the vehicle input from user will match make & model
-    const searchType = vehicles.filter(vehicle => vehicles.type === type)
-    const searchMake = vehicles.filter(vehicle => vehicles.make === make)
-    const searchModel = vehicles.filter(vehicle => vehicles.model === model)
+vehicleRouter.get('/search-type/:type', (req, res) => {
+    console.log(req)
+    const type = req.params.type;
+
+    const searchType = vehicles.filter(vehicle => vehicle.type === type)
+    // console.log(type)
+    res.send(searchType)
+
+
 })
+vehicleRouter.get('/searchMake/:make', (req, res) => {
+    console.log(req)
+    const make = req.params.make;
+
+    const searchMake = vehicles.filter(vehicle => vehicle.make === make)
+    // console.log(type)
+    res.send(searchMake)
+
+})
+vehicleRouter.get('/search-model/:model', (req, res) => {
+    console.log(req)
+    const model = req.params.model;
+
+    const searchModel = vehicles.filter(vehicle => vehicle.model === model)
+    // console.log(type)
+    res.send(searchModel)
+
+})
+
+
 
 module.exports = vehicleRouter;
