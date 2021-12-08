@@ -29,6 +29,8 @@ vehicleRouter.route('/').get((req, res) => {
         res.send(`${newVehicle.vehicles} has been added to the list!`)
     })
 //let user search the list of previously entered items
+
+
 vehicleRouter.get('/search-type/:type', (req, res) => {
     console.log(req)
     const type = req.params.type;
@@ -37,15 +39,28 @@ vehicleRouter.get('/search-type/:type', (req, res) => {
     // console.log(type)
     res.send(searchType)
 
+    /* POSTMAN Requests For Type */
+    /* van-   http://localhost:5000/vehicles/search-type/van?type=van */
+    /* car-   http://localhost:5000/vehicles/search-type/car?type=car */
+    /* truck-   http://localhost:5000/vehicles/search-type/truck?type=truck */
+    /* motorcycle-   http://localhost:5000/vehicles/search-type/motorcycle?type=motorcycle */
+
 
 })
-vehicleRouter.get('/searchMake/:make', (req, res) => {
+vehicleRouter.get('/search-make/:make', (req, res) => {
     console.log(req)
     const make = req.params.make;
 
     const searchMake = vehicles.filter(vehicle => vehicle.make === make)
     // console.log(type)
     res.send(searchMake)
+
+    /* POSTMAN Requests For make */
+    /* van-   http://localhost:5000/vehicles/search-make/honda?make=honda */
+    /* car-   http://localhost:5000/vehicles/search-make/dodge?make=dodge */
+    /* truck-   http://localhost:5000/vehicles/search-make/ford?make=ford */
+    /* motorcycle-   http://localhost:5000/vehicles/search-make/chevrolet?make=chevrolet */
+    /* motorcycle-   http://localhost:5000/vehicles/search-make/harley-davidson?make=harley-davidson */
 
 })
 vehicleRouter.get('/search-model/:model', (req, res) => {
@@ -55,6 +70,13 @@ vehicleRouter.get('/search-model/:model', (req, res) => {
     const searchModel = vehicles.filter(vehicle => vehicle.model === model)
     // console.log(type)
     res.send(searchModel)
+
+    /* POSTMAN Requests For make */
+    /* van-   http://localhost:5000/vehicles/search-model/honda?model= */
+    /* car-   http://localhost:5000/vehicles/search-model/dodge?model= */
+    /* truck-   http://localhost:5000/vehicles/search-model/f-150?model=f-150 */
+    /* motorcycle-   http://localhost:5000/vehicles/search-model/cbr-1000?model= */
+    /* motorcycle-   http://localhost:5000/vehicles/search-model/harley-davidson?model= */
 
 })
 
