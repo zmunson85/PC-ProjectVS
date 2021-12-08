@@ -3,7 +3,7 @@ import moment from 'moment'
 const Header = ({ date }) => {
     return (
         <div className='headerInfo'>
-            <h4 className='post'>Vschool: Zachary Munson {moment(date).format('dddd, MMMM, Do,  YYYY ')}</h4>
+            <h4 className='post'>Vschool: Zachary Munson {moment(date).format('dddd, MMMM, Do,  YYYY h:mm:ss a')}</h4>
         </div>
     )
 }

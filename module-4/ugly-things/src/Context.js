@@ -32,7 +32,6 @@ const Provider = (props) => {
             })
 
 
-
         }).catch((error) => console.error(error.message))
         setIsEditing(true)
     }
