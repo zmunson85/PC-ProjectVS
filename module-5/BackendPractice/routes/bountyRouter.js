@@ -2,6 +2,7 @@
 const express = require('express');
 const bountyRouter = express.Router();
 const uuid = require('uuid').v4;
+
 const bounty = [
     { firstName: "Obi-Wan", lastName: "Kenobi", living: true, bountyAmount: 500, type: "Sith", _id: uuid() },
     { firstName: "Master", lastName: "Yoda", living: true, bountyAmount: 10000, type: "Jedi", _id: uuid() },
