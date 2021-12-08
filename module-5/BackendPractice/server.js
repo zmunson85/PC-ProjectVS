@@ -6,8 +6,9 @@ const app = express();
 app.use(express.json())
 
 
-// app.use('/bounty', require('./routes/bountyRouter'));
+app.use('/bounty', require('./routes/bountyRouter'));
 app.use('/bounty2', require('./routes/bountyRouter2'))
+app.use('/todoList', require('./routes/todoRouter'))
 
 app.listen(5000, () => {
     console.log(`Server Fired Up on PORT ${5000}`)
