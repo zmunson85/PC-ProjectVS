@@ -39,7 +39,9 @@ export default function Contact() {
                         marginHeight={0}
                         marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src={API_KEY}
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d196138.256637777!2d-104.84005187090992!3d39.81461195049979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1639015812397!5m2!1sen!2sus"
+
+
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
