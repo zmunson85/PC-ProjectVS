@@ -1,4 +1,6 @@
 import React from "react";
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+
 
 export default function Contact() {
     const [name, setName] = React.useState("");
@@ -37,7 +39,7 @@ export default function Contact() {
                         marginHeight={0}
                         marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src="https://www.google.com/maps/embed/v1/place?q=denver+colorado&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        src={API_KEY}
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
