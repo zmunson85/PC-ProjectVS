@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://zmunson:Zachary..85@inventory.dwoe6.mongodb.net/crudStore?retryWrites=true&w=majority"
+}
