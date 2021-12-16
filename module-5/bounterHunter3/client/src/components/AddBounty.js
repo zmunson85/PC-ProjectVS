@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { BountyContext } from '../context/bountyContext'
 
 function AddBounty(props) {
     const initialInput = {
@@ -10,6 +11,8 @@ function AddBounty(props) {
     };
 
     const [newInput, setNewInput] = useState(initialInput);
+    const { getBounties } = useContext(BountyContext)
+    const { setEdit } = props
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -21,11 +24,14 @@ function AddBounty(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.submit(newInput, props._id);
+        setEdit(prevEdit => !prevEdit)
+        getBounties()
     };
 
 
     return (
         <form className='addBountyForm' onSubmit={handleSubmit}>
+            <h1>Create Your Personal Hit List!</h1>
             <input
                 type='text'
                 name='firstName'
@@ -52,7 +58,7 @@ function AddBounty(props) {
                 <option name="type" value="Sith" >Sith</option>
                 <option name="type" value="Space Ranger" >Space Ranger</option>
             </select>
-            <button>{props.btnText}</button>
+
 
 
 

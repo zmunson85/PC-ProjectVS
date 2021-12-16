@@ -10,7 +10,7 @@ function KillListProvider(props) {
     //get all bounties/killList
     const getBounties = () => {
         axios.get('/bounties')
-            .then(res => res.json())
+            .then(res => res.data)
             .then(res => {
                 setKillList(res)
             })

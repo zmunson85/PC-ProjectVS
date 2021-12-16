@@ -12,8 +12,9 @@ function KillList(props) {
         <ul>
             {!edit ?
                 <>
+                    <h1>KILL LIST</h1>
                     <li>
-                        <h1>Bounty:{`${firstName}, ${lastName}`}</h1>
+                        <h1>{`${firstName}, ${lastName}`}</h1>
                         <p>Living: {living}</p>
                         <p>Bounty: {bountyAmount}</p>
                         <p>Type: {type}</p>
@@ -30,12 +31,11 @@ function KillList(props) {
                         _id={_id}
                         bountyAmount={bountyAmount}
                         type={type}
-                        btnText="Save"
                         submit={editBounty}
                     />
 
                     <button onClick={() => setEdit(prevEdit => !prevEdit)}
-                    >Cancel</button>
+                    >Confirm</button>
                 </>
             }
         </ul>
