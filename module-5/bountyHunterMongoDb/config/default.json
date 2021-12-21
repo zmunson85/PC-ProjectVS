@@ -1,3 +1,3 @@
 {
-    "mongoURI": "mongodb+srv://zmunson:Zachary..85@bounties.fypep.mongodb.net/bounties?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://zmunson:Zachary..85@cluster0.fypep.mongodb.net/bounties?retryWrites=true&w=majority"
 }

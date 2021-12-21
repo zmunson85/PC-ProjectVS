@@ -3,16 +3,12 @@ const Schema = mongoose.Schema
 
 
 
-const bountySchema = new Schema({
+const BountySchema = new Schema({
     firstName: {
         type: String,
         required: true
     },
     lastName: {
-        type: String,
-        required: true
-    },
-    living: {
         type: String,
         required: true
     },
@@ -31,4 +27,4 @@ const bountySchema = new Schema({
 
 
 
-module.exports = mongoose.model("Bounty", bountySchema)
+module.exports = mongoose.model("Bounty", BountySchema)
